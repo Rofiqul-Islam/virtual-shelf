@@ -4,13 +4,34 @@
 	  	 echo "not connected";
 	  else echo "connected";
 
-	  $id=$_GET["id"];
-	  $author= $_GET["author_name"];
-      $book_name= $_GET["book_name"];
-      $edition= $_GET["edition"];
-      $info=$_GET["info"];
-      $review=$_GET["review"];
-      $image=$_GET["image"];
+
+	  $id=$_POST['id'];
+	  $author= $_POST["author_name"];
+      $book_name= $_POST["book_name"];
+      $edition= $_POST["edition"];
+      $info=$_POST["info"];
+      $review=$_POST["review"];
+      $image="dkjkdjs";
+
+     $uploaddir = 'C:/xampp/htdocs/Virtual-Shelve/uploads/';
+$uploadfile = $uploaddir .$id.".jpg";
+echo $uploadfile;
+
+echo "<p>";
+
+if (move_uploaded_file($_FILES['userfile']['tmp_name'], $uploadfile)) {
+  echo "File is valid, and was successfully uploaded.\n";
+  
+
+} else {
+   echo "Upload failed";
+}
+
+echo "</p>";
+echo '<pre>';
+echo 'Here is some more debugging info:';
+print_r($_FILES);
+print "</pre>";
 
 	 $sql = "INSERT INTO book (book_id,book_author, book_name, edition, info, Review,image)  values ('".$id."','".$author."','".$book_name."','".$edition."','".$info."','".$review."','".$image."')";
 
