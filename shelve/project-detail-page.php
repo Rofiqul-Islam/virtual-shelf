@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html class="no-js">
+
+
+<html>
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
 <head>
 
@@ -19,6 +21,28 @@
     <link href="styles/main.css" rel="stylesheet" media="screen, print" type="text/css" />
     <script src="lib/modernizr-2.6.2.js"></script>
 </head>
+<script>
+
+    book_id=<?php echo $_GET['data'];?>;
+    console.log(book_id);
+
+    xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function(){
+        if(this.readyState == 4 && this.status == 200)
+            console.log(this.responseText);
+        //if(!this.responseText.match(""))
+			myObj = JSON.parse(xhttp.responseText);
+			console.log(myObj);
+        document.getElementById("book_name").innerHTML=myObj.book_name;
+		document.getElementById("author_name").innerHTML=myObj.author_name;
+		document.getElementById("edition").innerHTML=myObj.edition;
+		document.getElementById("image").innerHTML="<li data-visual=\"website-design-florentina-norfolk\"><img src=\""+myObj.image+"\"></li>";
+    };
+    xhttp.open("GET","page.php?id="+book_id,true);
+
+    xhttp.send();
+
+</script>
 <body>
     <div id="container">
         <section id="content">
@@ -33,9 +57,10 @@
             </div>
             
 			<div id="preamble">
-                <h1>Pyaari</h1>
-                <h2>Free Responsive HTML5 Template - By 198seven</h2>
-                <p>198seven is a place where you can find quality professional themes, creative tips and inspirations across web development, web design, graphic design and more.</p>
+                <h1 id="book_name"></h1>
+                <h2 id="author_name"></h2>
+                <p id="edition"></p>
+                <br><br><br>
 				<p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera.</p>
 				<p class="space-after">que logro hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original.</p>
 				<h3>Services</h3>
@@ -54,18 +79,12 @@
 		</header>
     </div>
     
-    <section id="work-visuals">
-    	<ul>
-			<li data-visual="website-design-florentina-norfolk"><img src="images/work/project-detail-1.jpg">
-		&nbsp;</li>
-			<li data-visual="florentina-logo-design"><img src="images/work/project-detail-2.jpg">
-		&nbsp;</li>
-			<li data-visual="ipad-website-design-florentina-events"><img src="images/work/project-detail-3.jpg">
-		&nbsp;</li>
-			<li data-visual="florentina-website-design-full-page"><img src="images/work/project-detail-4.jpg">
-		&nbsp;</li>
+    <div id="work-visuals">
+    	<ul id="image>
+			
+			
 		</ul>
-    </section>
+    </div>
     
     <footer>
         <ul id="other-projects">
