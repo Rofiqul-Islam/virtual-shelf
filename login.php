@@ -1,15 +1,10 @@
 
 <?php
-/**
- * Created by PhpStorm.
- * User: DELL
- * Date: 3/28/2017
- * Time: 11:01
- */
-$servername="127.0.0.1";
-$username = "root";
-$password = "";
-$dbname = "webproject";
+session_start();
+$servername="localhost";
+$username = "virtualshelf";
+$password = "helloworld";
+$dbname = "virtualshelf";
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 $email = $_POST['email'];
@@ -32,13 +27,21 @@ if($conn->connect_error)
     $result = $conn->query($sql);
     if($result->num_rows === 0)
     {
-        echo "Incorrect Mail Id or Password!!Please check again";
+        $_SESSION["flag"] = "0";
     }
     else
     {
-        echo  "1";
+        $_SESSION["flag"] = "1";
     }
 
+    $conn->close();
 
-$conn->close();
+if($_SESSION["flag"]==1)
+    {header('Location: /shelve/index.html');
+    exit;}
+
+else 
+    echo "<script type='text/javascript'>alert("Wrong Username or Password");</script>";
+
+
 ?>

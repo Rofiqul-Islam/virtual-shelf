@@ -1,10 +1,11 @@
 <?php
-function sendVerificationBySwift($email,$name)
+function sendVerificationBySwift($email,$name,$id)
 {
     require_once 'lib/swift_required.php';
 
-    $subject = 'Lalbus Signup | Verification'; // Give the email a subject
-    $address="http://103.28.121.126/virtual-shelf/verify?email=".$email;
+    $subject = 'virtual-shelf | Verification'; // Give the email a subject
+    $address="http://103.28.121.126/virtual-shelf/verify?email=".$email."&hash=".$id;
+    $body = ';
     $body = '
  
 Thanks for signing up!
@@ -49,5 +50,5 @@ Please click this link to activate your account:.
 	  else
 	   echo "regestration  Failed";
 
-	sendVerificationBySwift($email,$username);
+	sendVerificationBySwift($email,$username,"1");
 ?>
