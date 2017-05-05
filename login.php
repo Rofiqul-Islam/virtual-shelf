@@ -11,8 +11,7 @@ $email = $_POST['email'];
 
 //$pass = md5($_POST['pass']);
 $pass=$_POST['pass'];
-echo $email;
-echo $pass;
+
 
 
 
@@ -33,7 +32,7 @@ if($conn->connect_error)
     if($result->num_rows === 0)
     {
         $_SESSION["flag"] = "0";
-        echo "what";
+        
     }
     else 
     {
@@ -49,11 +48,10 @@ if($conn->connect_error)
 		$id= $obj->User_ID;
 
 		$_SESSION["user_id"] = $id;
-		echo $id;
-
+		
     }
 
-	
+	$conn->close();
 
    if(strcmp($_SESSION["flag"],"0"))
    {
@@ -63,10 +61,11 @@ if($conn->connect_error)
    }
    else if(strcmp($_SESSION["flag"],"1"))
    {
-   	echo "ok";
+   		header("Location: /shelve/index.php");
+		die();
    }
 
-    $conn->close();
+    
 
 
 
