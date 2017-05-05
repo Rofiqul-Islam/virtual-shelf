@@ -45,8 +45,8 @@ if($conn->connect_error)
 
 		$result1 = $conn->query($sql1);
 
-		$id=mysqli_fetch_assoc($result1);
-		echo $id;
+		while($obj=mysqli_fetch_object($result))
+		echo $obj->User_ID;
     }
 
 	
