@@ -32,8 +32,8 @@ if($conn->connect_error)
     $result = $conn->query($sql);
     while(mysqli_fetch_assoc($result))
     	$i++;
-    echo $i;
-    if($result->num_rows == 0)
+    
+    if($i==0)
     {
         $_SESSION["flag"] = "0";
        // echo $_SESSION["flag"];
@@ -62,7 +62,7 @@ if($conn->connect_error)
    if(strcmp($_SESSION["flag"],"0")==0)
    {
 
-   		//echo "<script type='text/javascript'>alert(\"Incorrect Eamil or Password\");</script>";
+   		echo "<script type='text/javascript'>alert(\"Incorrect Eamil or Password\");</script>";
    		//header("Location: index.html");
 		//die();
    	//echo "hello";
@@ -71,8 +71,8 @@ if($conn->connect_error)
    else if(strcmp($_SESSION["flag"],"1")==0)
    {
    		//echo "gelo";
-   		//header("Location: /shelve/index.php");
-		//die();
+   		header("Location: /shelve/index.php");
+		die();
    }
 
     
