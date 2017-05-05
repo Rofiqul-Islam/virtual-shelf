@@ -55,7 +55,7 @@ if($conn->connect_error)
 
 	
 
-   if(strcmp($_SESSION["flag"],"0")
+   if(strcmp($_SESSION["flag"],"0"))
    {
 
    		echo "hello";
