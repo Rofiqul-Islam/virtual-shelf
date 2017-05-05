@@ -1,6 +1,6 @@
 
 <?php
-session_start();
+
 $servername="localhost";
 $username = "virtualshelf";
 $password = "helloworld";
@@ -15,7 +15,7 @@ $emaillerr = $passerr = "";
 
 if($conn->connect_error)
 {
-    echo "Connection not successful";
+   // echo "Connection not successful";
     
 }
     $sql ="SELECT count(*) FROM user WHERE(
@@ -27,21 +27,16 @@ if($conn->connect_error)
     $result = $conn->query($sql);
     if($result->num_rows === 0)
     {
-        $_SESSION["flag"] = "0";
+        echo "0";
     }
     else
     {
-        $_SESSION["flag"] = "1";
+        echo "1";
     }
 
     $conn->close();
 
-if($_SESSION["flag"]==1)
-    {header('Location: /shelve/index.html');
-    exit;}
 
-else 
-    echo "<script type='text/javascript'>alert("Wrong Username or Password");</script>";
 
 
 ?>
