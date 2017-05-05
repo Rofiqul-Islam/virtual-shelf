@@ -57,6 +57,8 @@ if($conn->connect_error)
    {
 
    		echo "<script type='text/javascript'>alert(\"Incorrect Eamil or Password\");</script>";
+   		header("Location: /index.html");
+		die();
 
    }
    else if(strcmp($_SESSION["flag"],"1"))
