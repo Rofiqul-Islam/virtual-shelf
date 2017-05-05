@@ -32,6 +32,7 @@ if($conn->connect_error)
     if($result->num_rows === 0)
     {
         $_SESSION["flag"] = "0";
+        echo $_SESSION["flag"];
         
     }
     else 
@@ -48,7 +49,7 @@ if($conn->connect_error)
 		$id= $obj->User_ID;
 
 		$_SESSION["user_id"] = $id;
-		echo $id;
+		echo $_SESSION["flag"];
 		
     }
 
