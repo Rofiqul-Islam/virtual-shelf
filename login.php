@@ -15,7 +15,7 @@ $emaillerr = $passerr = "";
 
 if($conn->connect_error)
 {
-   // echo "Connection not successful";
+    echo "Connection not successful";
     
 }
     $sql ="SELECT count(*) FROM user WHERE(
