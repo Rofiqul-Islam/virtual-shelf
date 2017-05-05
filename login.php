@@ -40,7 +40,7 @@ if($conn->connect_error)
 				AND 
 				Password='" . $pass . "');";
 
-	$id=fetch_assoc($sql1);
+	$id=mysqli_fetch_assoc($sql1);
 	echo $id;
 
    if($_SESSION["flag"]=="0")
