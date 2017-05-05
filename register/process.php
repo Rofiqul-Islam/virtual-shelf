@@ -4,7 +4,7 @@ function sendVerificationBySwift($email,$name)
     require_once 'lib/swift_required.php';
 
     $subject = 'Lalbus Signup | Verification'; // Give the email a subject
-    $address="http://127.0.0.1/virtual-shelf/verify?email=".$email;
+    $address="http://103.28.121.126/virtual-shelf/verify?email=".$email;
     $body = '
  
 Thanks for signing up!
@@ -33,7 +33,7 @@ Please click this link to activate your account:.
 }
 
 
-      $conn = mysqli_connect('localhost', 'root', '','webproject');
+      $conn = mysqli_connect('localhost', 'virtualshelf', 'helloworld','virtualshelf');
 	  if($conn->connect_errno>0) echo "not connected";
 	  else echo "connected";
 
