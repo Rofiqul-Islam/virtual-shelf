@@ -29,7 +29,7 @@ if($conn->connect_error)
 
     //$sql = "SELECT * FROM user";
     $result = $conn->query($sql);
-    if($result->num_rows === 0)
+    if($result->num_rows == 0)
     {
         $_SESSION["flag"] = "0";
         echo $_SESSION["flag"];
