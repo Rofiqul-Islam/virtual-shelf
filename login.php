@@ -46,12 +46,15 @@ if($conn->connect_error)
 		$result1 = $conn->query($sql1);
 
 		while($obj=mysqli_fetch_object($result1))
-		echo $obj->User_ID;
+		$id= $obj->User_ID;
+
+		$_SESSION["user_id"] = $id;
+
     }
 
 	
 
-   if($_SESSION["flag"]=="0")
+   if($_SESSION["flag"]==0)
    {
 
    		echo "hello";
