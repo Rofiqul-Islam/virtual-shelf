@@ -71,7 +71,7 @@ if($conn->connect_error)
    else if(strcmp($_SESSION["flag"],"1")==0)
    {
    		//echo "gelo";
-   		header("Location: virtual-shelf/shelve/index.html");
+   		header("Location: /shelve/index.html");
 		die();
    }
 
