@@ -8,7 +8,7 @@
     <!-- Meta info -->
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Project Detail | 198seven</title>
+    <title>seminardetails</title>
     <meta content="" name="description" />
     <link rel="Shortcut Icon" type="image/x-icon" href="#" />
     
@@ -23,7 +23,7 @@
 </head>
 <script>
 
-    book_id=<?php echo $_GET['data'];?>;
+    seminar_id=<?php echo $_GET['data'];?>;
     console.log(book_id);
 
     xhttp = new XMLHttpRequest();
@@ -33,10 +33,10 @@
         //if(!this.responseText.match(""))
 			myObj = JSON.parse(xhttp.responseText);
 			console.log(myObj);
-        document.getElementById("book_name").innerHTML=myObj.book_name;
-		document.getElementById("author_name").innerHTML=myObj.author_name;
-		document.getElementById("edition").innerHTML=myObj.edition;
-		document.getElementById("image").innerHTML="<li data-visual=\"website-design-florentina-norfolk\"><img src=\""+myObj.image+"\"></li>";
+        //document.getElementById("book_name").innerHTML=myObj.book_name;
+		//document.getElementById("author_name").innerHTML=myObj.author_name;
+		//document.getElementById("edition").innerHTML=myObj.edition;
+		//document.getElementById("image").innerHTML="<li data-visual=\"website-design-florentina-norfolk\"><img src=\"PRESS.jpg\"></li>";
     };
     xhttp.open("GET","page.php?id="+book_id,true);
 
@@ -52,7 +52,7 @@
 		<header>
 			<div id="pfd">
 				<a href="index.html">
-            		<img src="images/pyaari-logo.png" alt="Pyaari Website - For Website and Graphic Designers">
+            		<img src="images/pyaari-logo.png" >
         		</a>
             </div>
             
@@ -81,6 +81,8 @@
     
     <div id="work-visuals">
     	<ul id="image>
+
+        <li data-visual=\"website-design-florentina-norfolk\"><img src="PRESS.jpg"></li>
 			
 			
 		</ul>

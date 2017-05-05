@@ -1,4 +1,38 @@
 <?php
+function sendVerificationBySwift($email,$name)
+{
+    require_once 'lib/swift_required.php';
+
+    $subject = 'Lalbus Signup | Verification'; // Give the email a subject
+    $address="http://127.0.0.1/virtual-shelf/verify?email=".$email;
+    $body = '
+ 
+Thanks for signing up!
+Your account has been created, you can login with the following credentials after you have activated your account by pressing the url below.
+ 
+------------------------
+Username: '.$name.'
+------------------------
+ 
+Please click this link to activate your account:.
+ '.$address;
+
+        $transport = Swift_SmtpTransport::newInstance('smtp.gmail.com', 465, "ssl")
+            ->setUsername('virtualshelf2965@gmail.com')
+            ->setPassword('nomanmarakha')
+            ->setEncryption('ssl');
+
+        $mailer = Swift_Mailer::newInstance($transport);
+
+        $message = Swift_Message::newInstance($subject)
+            ->setFrom(array('noreply@lalbus.com' => 'Lalbus'))
+            ->setTo(array($email))
+            ->setBody($body);
+
+        $result = $mailer->send($message);
+}
+
+
       $conn = mysqli_connect('localhost', 'root', '','webproject');
 	  if($conn->connect_errno>0) echo "not connected";
 	  else echo "connected";
@@ -14,4 +48,6 @@
 		echo "registered Successfully\n";
 	  else
 	   echo "regestration  Failed";
+
+	sendVerificationBySwift($email,$username);
 ?>

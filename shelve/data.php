@@ -1,5 +1,5 @@
 <?php
-$con = mysqli_connect('localhost', 'root', '','webproject');
+$con = mysqli_connect('localhost', 'virtualshelf', 'helloworld','virtualshelf');
 if($con->connect_errno>0) echo "not connected";
 $image="default.jpg";
 $books_name;
@@ -17,10 +17,9 @@ $author_name = $obj->book_author;
 $ch_image=$obj->Image;
 $book_id=$obj->book_id;
 
-if(strcmp($ch_image,"default.jpg")==0)
-$data=$data."<li><a href=\"project-detail-page.php?data=".$book_id."\"><img src=".$image."><div class=\"overlay\"><summary><h2>".$books_name."</h2><h3>".$author_name."</h3></summary><><div class=\"loves\"><span>77</span></div></div></a></li>";
-else
-$data=$data."<li><a href=\"project-detail-page.php?data=".$book_id."\"><img src=".$ch_image."><div class=\"overlay\"><summary><h2>".$books_name."</h2><h3>".$author_name."</h3></summary><><div class=\"loves\"><span>77</span></div></div></a></li>";
+
+$data=$data."<li><a href=\"project-detail-page.php?data=".$book_id."\"><img src="."default.jpg"."><div class=\"overlay\"><summary><h2>".$books_name."</h2><h3>".$author_name."</h3></summary><><div class=\"loves\"><span>77</span></div></div></a></li>";
+
 
 if($var==0)break;
 $var--;
