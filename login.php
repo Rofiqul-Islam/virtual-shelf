@@ -8,8 +8,10 @@ $dbname = "virtualshelf";
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 $email = $_POST['username'];
+echo $email;
 $pass = $_POST['pass'];
-$emaillerr = $passerr = "";
+echo $pass;
+
 
 
 
