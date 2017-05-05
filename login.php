@@ -7,7 +7,7 @@ $password = "helloworld";
 $dbname = "virtualshelf";
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-$email = $_POST['email'];
+$email = $_POST['username'];
 $pass = $_POST['pass'];
 $emaillerr = $passerr = "";
 
