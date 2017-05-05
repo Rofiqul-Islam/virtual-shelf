@@ -40,7 +40,9 @@ if($conn->connect_error)
 				AND 
 				Password='" . $pass . "');";
 
-		$id=mysqli_fetch_assoc($sql1);
+		$result1 = $conn->query($sql1);
+
+		$id=mysqli_fetch_assoc($result1);
 		echo $id;
     }
 
