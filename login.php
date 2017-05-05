@@ -53,7 +53,7 @@ if($conn->connect_error)
 
 	$conn->close();
 
-   if(strcmp($_SESSION["flag"],"0"))
+   if(strcmp($_SESSION["flag"],"0")==0)
    {
 
    		//echo "<script type='text/javascript'>alert(\"Incorrect Eamil or Password\");</script>";
@@ -62,7 +62,7 @@ if($conn->connect_error)
    	echo "hello";
 
    }
-   else if(strcmp($_SESSION["flag"],"1"))
+   else if(strcmp($_SESSION["flag"],"1")==0)
    {
    		echo "gelo";
    		//header("Location: /shelve/index.php");
