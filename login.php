@@ -48,6 +48,7 @@ if($conn->connect_error)
 		$id= $obj->User_ID;
 
 		$_SESSION["user_id"] = $id;
+		echo $id;
 		
     }
 
