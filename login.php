@@ -56,15 +56,17 @@ if($conn->connect_error)
    if(strcmp($_SESSION["flag"],"0"))
    {
 
-   		echo "<script type='text/javascript'>alert(\"Incorrect Eamil or Password\");</script>";
+   		//echo "<script type='text/javascript'>alert(\"Incorrect Eamil or Password\");</script>";
    		//header("Location: index.html");
 		//die();
+   	echo "hello"
 
    }
    else if(strcmp($_SESSION["flag"],"1"))
    {
-   		header("Location: /shelve/index.php");
-		die();
+   		echo "gelo";
+   		//header("Location: /shelve/index.php");
+		//die();
    }
 
     
