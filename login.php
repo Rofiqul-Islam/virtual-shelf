@@ -29,7 +29,8 @@ if($conn->connect_error)
 
     //$sql = "SELECT * FROM user";
     $result = $conn->query($sql);
-    echo $result->num_rows;
+    while($r=mysqli_fetch_assoc($result))
+    	echo $r;
     if($result->num_rows == 0)
     {
         $_SESSION["flag"] = "0";
