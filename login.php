@@ -58,8 +58,12 @@ if($conn->connect_error)
    if(strcmp($_SESSION["flag"],"0"))
    {
 
-   		echo "hello";
+   		echo "<script type='text/javascript'>alert("Incorrect Eamil or Password");</script>";
 
+   }
+   else if(strcmp($_SESSION["flag"],"1"))
+   {
+   	echo "ok";
    }
 
     $conn->close();
