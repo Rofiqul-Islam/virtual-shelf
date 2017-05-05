@@ -22,18 +22,21 @@ if($conn->connect_error)
     echo "Connection not successful";
     
 }
-    $sql ="SELECT count(*) FROM user WHERE(
+    $sql ="SELECT * FROM user WHERE(
 		        User_Email='" . $email . "' 
 				AND 
 				Password='" . $pass . "');";
 
     //$sql = "SELECT * FROM user";
+	$i=0;
     $result = $conn->query($sql);
-    echo $result;
+    while(mysqli_fetch_assoc($result))
+    	$i++;
+    echo $i;
     if($result->num_rows == 0)
     {
         $_SESSION["flag"] = "0";
-        echo $_SESSION["flag"];
+       // echo $_SESSION["flag"];
         
     }
     else 
@@ -50,7 +53,7 @@ if($conn->connect_error)
 		$id= $obj->User_ID;
 
 		$_SESSION["user_id"] = $id;
-		echo $_SESSION["flag"];
+		//echo $_SESSION["flag"];
 		
     }
 
@@ -62,12 +65,12 @@ if($conn->connect_error)
    		//echo "<script type='text/javascript'>alert(\"Incorrect Eamil or Password\");</script>";
    		//header("Location: index.html");
 		//die();
-   	echo "hello";
+   	//echo "hello";
 
    }
    else if(strcmp($_SESSION["flag"],"1")==0)
    {
-   		echo "gelo";
+   		//echo "gelo";
    		//header("Location: /shelve/index.php");
 		//die();
    }
