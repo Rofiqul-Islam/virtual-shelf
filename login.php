@@ -35,13 +35,16 @@ if($conn->connect_error)
     else
     {
         $_SESSION["flag"] = "1";
-    }
-    $sql1="SELECT User_ID from user WHERE(User_Email='" . $email . "' 
+	         $id="";
+	    $sql1="SELECT User_ID from user WHERE(User_Email='" . $email . "' 
 				AND 
 				Password='" . $pass . "');";
 
-	$id=mysqli_fetch_assoc($sql1);
-	echo $id;
+		$id=mysqli_fetch_assoc($sql1);
+		echo $id;
+    }
+
+	
 
    if($_SESSION["flag"]=="0")
    {
