@@ -11,6 +11,8 @@ $email = $_POST['email'];
 
 //$pass = md5($_POST['pass']);
 $pass=$_POST['pass'];
+echo $email;
+echo $pass;
 
 
 
@@ -31,8 +33,9 @@ if($conn->connect_error)
     if($result->num_rows === 0)
     {
         $_SESSION["flag"] = "0";
+        echo "what";
     }
-    else
+    else 
     {
         $_SESSION["flag"] = "1";
 	         $id="";
