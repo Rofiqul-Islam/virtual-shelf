@@ -36,7 +36,7 @@ if($conn->connect_error)
     
     if($i==0)
     {
-        $_SESSION["flag"] = "0";
+      
        // echo $_SESSION["flag"];
         echo '<script type="text/javascript">'; 
         echo 'alert("Incorrect Email or Password");'; 
@@ -66,7 +66,10 @@ if($conn->connect_error)
   {	
     session_start();
     $_SESSION["user_id"] = $id;
-     $_SESSION["flag"] = "1";
+      $conn->close();
+    header("Location: shelve/index.php");
+    die();
+    
    }
     else
     {
@@ -82,15 +85,10 @@ if($conn->connect_error)
 		
     }
 
-	$conn->close();
+
 
    
-   if(strcmp($_SESSION["flag"],"1")==0)
-   {
-   		//echo "gelo";
-   		header("Location: shelve/index.php");
-		die();
-   }
+   
 
     
 
