@@ -70,7 +70,7 @@ print "</pre>";
 
     if($i==0)
 	 {
-        $sql = "INSERT INTO user (User_name, Password, User_Email, DU_REG_NO, User_Image,status)  values ('".$username."','".$password."','".$email."','".$reg_no."','".$image."',0)";
+        $sql = "INSERT INTO user (User_name, Password, User_Email, DU_REG_NO, User_Image,status)  values ('".$username."','".$password."','".$email."','".$reg_no."','".$image."',s0)";
 
 	  if($conn->query($sql) )
 		echo "registered Successfully\n";
@@ -88,8 +88,8 @@ print "</pre>";
 
 
 	sendVerificationBySwift($email,$username,$_SESSION["user_id"]);
-    //header("Location: ../index.html");
-      //  die();
+    header("Location: ../index.html");
+        die();
     }
     else
     {
