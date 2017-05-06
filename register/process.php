@@ -50,7 +50,7 @@ Please click this link to activate your account:.
 
     if($i==0)
 	 {
-        $sql = "INSERT INTO user (User_name, Password, User_Email, DU_REG_NO, User_Image)  values ('".$username."','".$password."','".$email."','".$reg_no."',null)";
+        $sql = "INSERT INTO user (User_name, Password, User_Email, DU_REG_NO, User_Image,status)  values ('".$username."','".$password."','".$email."','".$reg_no."',null,0)";
 
 	  if($conn->query($sql) )
 		echo "registered Successfully\n";
@@ -66,7 +66,10 @@ Please click this link to activate your account:.
 
         $_SESSION["user_id"] = $id;
 
+
 	sendVerificationBySwift($email,$username,$_SESSION["user_id"]);
+    header("Location: ../index.html");
+        die();
     }
     else
     {
