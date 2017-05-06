@@ -1,3 +1,4 @@
+<?php include 'access_controled.php'; ?>
 <!DOCTYPE html>
 <html class="no-js">
 <head>
@@ -6,7 +7,7 @@
     <!-- Meta info -->
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - 198seven</title>
+    <title>What We Do - 198seven</title>
     <meta content="" name="description">
     <meta name="author" content="">
     <meta name="format-detection" content="">
@@ -15,30 +16,44 @@
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' rel='stylesheet' type='text/css'>
     <link href="styles/main.css" rel="stylesheet" media="screen, print" type="text/css">
     <script src="lib/modernizr-2.6.2.js"></script>
+    
+    
 </head>
 <body>
     <div id="container">
         <section id="content">
             
-<header>
-    <div id="pfd">
-        <a href="index.html">
-            <img src="images/pyaari-logo.png" alt="Pyaari Website - For Website and Graphic Designers">
-        </a>
-    </div>
-    
-    <div id="preamble">
-            <h1>About</h1>
-			<p>198seven is a place where you can find quality professional themes, creative tips and inspirations across web development, web design, graphic design and more. Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera.</p>
-			<p><span class="strong">198seven</span> commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis</p>
-			<p><span class="strong">Pyaari</span> Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt</p>
-			<p class="space-after"><span class="strong">Freebie</span> Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc.</p>
-			<h3>Our Studio</h3>
-			<p>Would the fall never come to an end! I wonder how many miles <a href="http://www.198seven.com/contact/">get in touch</a>.</p>
-	</div>
-</header>
+<div id="what-we-do">
+	<header>
+    	<div id="pfd">
+        	<a href="index.html">
+            	<img src="images/pyaari-logo.png" alt="Pyaari Website - For Website and Graphic Designers">
+        	</a>
+    	</div>
+        
+    	<div id="preamble">
+        	<h1>What we do.</h1>
+				<p class="em" style="color:#fff;">Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister.</p>
+				<p class="em" style="color:#fff;">So she was considering in her own mind (as well as she could, for the hot day made her feel very sleepy and stupid), whether the pleasure of making a daisy- chain would be worth the trouble of getting up and picking the daisies, when suddenly a White Rabbit with pink eyes ran close by her.</p>
+				<p class="em" style="color:#fff;">In another moment down went Alice after it, never once considering how in the world she was to get out again.</p>
+		</div>
+	</header>
 
-         <footer id="msf">
+
+	<section id="web-design">
+		<article>
+        	<h2>Website design &amp; development.</h2>
+				<p>Would the fall never come to an end! `I wonder how many miles I've fallen by this time?' she said aloud. `I must be getting somewhere near the centre of the earth. Let me see</p>
+				<p>There was nothing else to do, so Alice soon began talking again. Dinah'll miss me very much to-night, I should think! (Dinah was the cat .) I hope they'll remember her saucer of milk at tea-time. Dinah my dear! I wish you were down here with me! There are no mice in the air, I'm afraid, but you might catch a bat, and that's very like a mouse, you know. But do cats eat bats, I wonder?' And here Alice began to get rather sleepy, and went on saying to herself, in a dreamy sort of way, Do cats eat bats? Do cats eat bats?' and sometimesv Do bats eat cats? for</p>
+				<p>Alice was not a bit hurt, and she jumped up on to her feet in a moment: she looked up, but it was all dark overhead; before her was another long.</p>
+				<p>If you haven't already, have a look through our <a href="index.html">work</a> to see a few examples of what we have done.</p>
+
+		</article>
+	</section>
+</div><!-- what we do -->
+
+
+        <footer id="msf">
             <div class="wrapper">
                 <ul id="lets-be-social">
                     <li>
@@ -66,9 +81,9 @@
             <li>
                 <a href="index.html">Work.</a></li>
             <li>
-                <a class="active" href="about.html">About.</a></li>
+                <a href="about.html">About.</a></li>
             <li>
-                <a href="what-we-do.html">What we do.</a></li>
+                <a class="active" href="what-we-do.html">What we do.</a></li>
         </ul>
 	</nav>
         
@@ -77,6 +92,7 @@
             <p>The Pyaari website is fully responsive and requires Javascript.<br> Please <a href="http://enable-javascript.com/">enable javascript</a> to use this site without issue.</p>
         </div>
     </div><!-- no-script -->
+    
     
     <script src="ajax/jquery-1.11.0.min.js"></script>
     <script src="scripts/pyaari-main.1.0.js"></script>
