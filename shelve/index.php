@@ -143,6 +143,9 @@
                 <a href="what-we-do.html">What we do.</a></li>
 			<li>
                 <a href="logout.php">Logout</a></li>
+			<li>
+				<img src ="propic.jpg" height="180" width="180">
+			</li>
         </ul>
 	</nav>
        
