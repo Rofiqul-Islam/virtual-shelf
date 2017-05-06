@@ -59,7 +59,7 @@ if($conn->connect_error)
       $status=$obj->status;}
 
   
-  if(strcmp.(status,"1")==0)
+  if(strcmp(status,"1")==0)
   {	
     $_SESSION["user_id"] = $id;
      $_SESSION["flag"] = "1";
