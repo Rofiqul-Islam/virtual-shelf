@@ -33,10 +33,10 @@
         //if(!this.responseText.match(""))
 			myObj = JSON.parse(xhttp.responseText);
 			console.log(myObj);
-        document.getElementById("book_name").innerHTML=myObj.book_name;
-		document.getElementById("author_name").innerHTML=myObj.author_name;
-		document.getElementById("edition").innerHTML=myObj.edition;
-		document.getElementById("image").innerHTML="<li data-visual=\"website-design-florentina-norfolk\"><img src=\""+myObj.image+"\"></li>";
+        document.getElementById("book_name").innerHTML=myObj['book_name'];
+		document.getElementById("author_name").innerHTML=myObj['book_author'];
+		document.getElementById("edition").innerHTML=myObj['edition']+" edition";
+		document.getElementById("work-visuals").innerHTML="</br></br></br></br></br><li data-visual=\"website-design-florentina-norfolk\"><img src=\""+myObj['Image']+"\"></li>";
     };
     xhttp.open("GET","page.php?id="+book_id,true);
 
@@ -80,23 +80,10 @@
     </div>
     
     <div id="work-visuals">
-    	<ul id="image>
-			
-			
-		</ul>
-    </div>
-    
-    <footer>
-        <ul id="other-projects">
-            <li>
-                <a class="previous-work" href="" rel="prev">Lorem Ipsum</a>
-            </li>
-            <li>
-                <a class="next-work" href="" rel="next">Lorem Ipsum</a>
-            </li>
-        </ul>
-    </footer>
-</div>
+    	
+            
+        
+	</div>
 </section>
 
 
