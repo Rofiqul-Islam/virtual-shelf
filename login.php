@@ -33,14 +33,15 @@ if($conn->connect_error)
     $result = $conn->query($sql);
     while(mysqli_fetch_assoc($result))
     	$i++;
+    echo $i;
     
     if($i==0)
     {
       
-       // echo $_SESSION["flag"];
+     
         echo '<script type="text/javascript">'; 
         echo 'alert("Incorrect Email or Password");'; 
-        echo 'window.location.href = "index.html";';
+        //echo 'window.location.href = "index.html";';
         echo '</script>';
         
     }
