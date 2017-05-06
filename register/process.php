@@ -42,9 +42,9 @@ Please click this link to activate your account:.
 	  $email = $_POST["email"];
       $reg_no= $_POST["reg_no"];
       $password = $_POST["password"];
-      $image=$id.".jpg";
+      $image=$username.".jpg";
       $uploaddir = '/var/www/html/virtual-shelf/userpic/';
-      $uploadfile = $uploaddir .$id.".jpg";
+      $uploadfile = $uploaddir .$username.".jpg";
       echo $uploadfile;
 
       echo "<p>";
