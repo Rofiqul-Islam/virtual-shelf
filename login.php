@@ -72,7 +72,7 @@ if($conn->connect_error)
          $_SESSION["flag"] = "0";
          echo '<script type="text/javascript">'; 
         echo 'alert("Account not verified, verify it!");'; 
-        //echo 'window.location.href = "index.html";';
+        echo 'window.location.href = "index.html";';
         echo '</script>';
 
      }
