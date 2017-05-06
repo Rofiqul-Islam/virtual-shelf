@@ -13,7 +13,8 @@ $email = $_POST['email'];
 $pass=$_POST['pass'];
 
 
-
+$status="0";
+$r=0;
 
 
 
@@ -37,38 +38,49 @@ if($conn->connect_error)
     {
         $_SESSION["flag"] = "0";
        // echo $_SESSION["flag"];
+        echo '<script type="text/javascript">'; 
+        echo 'alert("Incorrect Email or Password");'; 
+        echo 'window.location.href = "index.html";';
+        echo '</script>';
         
     }
     else 
     {
-        $_SESSION["flag"] = "1";
+       
 	         $id="";
-	    $sql1="SELECT User_ID from user WHERE(User_Email='" . $email . "' 
+	    $sql1="SELECT (User_ID,status) from user WHERE(User_Email='" . $email . "' 
 				AND 
 				Password='" . $pass . "');";
 
 		$result1 = $conn->query($sql1);
 
 		while($obj=mysqli_fetch_object($result1))
-		$id= $obj->User_ID;
+		{$id= $obj->User_ID;
+      $status=$obj->status;}
 
-		$_SESSION["user_id"] = $id;
+  
+  if(strcmp.(status,"1")==0)
+  {	
+    $_SESSION["user_id"] = $id;
+     $_SESSION["flag"] = "1";
+   }
+     else
+     {
+         $_SESSION["flag"] = "0";
+         echo '<script type="text/javascript">'; 
+        echo 'alert("Account not verified, verify it!");'; 
+        echo 'window.location.href = "index.html";';
+        echo '</script>';
+
+     }
 		
 		
     }
 
 	$conn->close();
 
-   if(strcmp($_SESSION["flag"],"0")==0)
-   {
-
-   		echo '<script type="text/javascript">'; 
-        echo 'alert("Incorrect Email or Password");'; 
-        echo 'window.location.href = "index.html";';
-        echo '</script>';
-
-   }
-   else if(strcmp($_SESSION["flag"],"1")==0)
+   
+   if(strcmp($_SESSION["flag"],"1")==0)
    {
    		//echo "gelo";
    		header("Location: shelve/index.html");

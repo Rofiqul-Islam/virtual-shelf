@@ -10,7 +10,9 @@ echo $id;
 	 $sql="UPDATE user
 	SET status = '1' WHERE User_Email='" . $email . "';";
 	$result1 = $conn->query($sql);
+		$conn->close();
 
-
+	header("Location: index.html");
+        die();
 
 ?>
