@@ -1,5 +1,9 @@
 <?php
-      $conn = mysqli_connect('localhost', 'root', '','webproject');
+$servername="localhost";
+$username = "virtualshelf";
+$password = "helloworld";
+$dbname = "virtualshelf";
+      $conn = mysqli_connect('localhost', 'virtualshelf', 'helloworld','virtualshelf');
 	  if($conn->connect_errno>0)
 	  	 echo "not connected";
 	  else echo "connected";
@@ -11,9 +15,9 @@
       $edition= $_POST["edition"];
       $info=$_POST["info"];
       $review=$_POST["review"];
-      $image="dkjkdjs";
+      //$image="dkjkdjs";
 
-     $uploaddir = 'C:/xampp/htdocs/Virtual-Shelve/uploads/';
+     $uploaddir = '/var/www/html/virtual-shelf/upload/';
 $uploadfile = $uploaddir .$id.".jpg";
 echo $uploadfile;
 
