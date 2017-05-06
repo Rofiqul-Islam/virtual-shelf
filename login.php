@@ -41,7 +41,7 @@ if($conn->connect_error)
      
         echo '<script type="text/javascript">'; 
         echo 'alert("Incorrect Email or Password");'; 
-        //echo 'window.location.href = "index.html";';
+        echo 'window.location.href = "index.html";';
         echo '</script>';
         
     }
