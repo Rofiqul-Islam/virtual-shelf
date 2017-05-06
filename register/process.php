@@ -5,7 +5,7 @@ function sendVerificationBySwift($email,$name,$id)
     require_once 'lib/swift_required.php';
 
     $subject = 'virtual-shelf | Verification'; // Give the email a subject
-    $address="http://103.28.121.126/virtual-shelf/verify.php?email=".$email."&hash=".$id;
+    $address="http://103.28.121.126/virtual-shelf/verify.php?email=".$email."&id=".$_SESSION["user_id"];
     $body = '
  
 Thanks for signing up!
