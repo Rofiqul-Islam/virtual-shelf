@@ -88,7 +88,7 @@ if($conn->connect_error)
    if(strcmp($_SESSION["flag"],"1")==0)
    {
    		//echo "gelo";
-   		header("Location: shelve/index.html");
+   		header("Location: shelve/index.php");
 		die();
    }
 
