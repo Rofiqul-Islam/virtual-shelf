@@ -5,7 +5,6 @@ function sendVerificationBySwift($email,$name,$id)
 
     $subject = 'virtual-shelf | Verification'; // Give the email a subject
     $address="http://103.28.121.126/virtual-shelf/verify?email=".$email."&hash=".$id;
-    $body = ';
     $body = '
  
 Thanks for signing up!
