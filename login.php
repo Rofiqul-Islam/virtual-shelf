@@ -58,18 +58,21 @@ if($conn->connect_error)
 		{$id= $obj->User_ID;
       $status=$obj->status;}
 
+      echo $status;
+
+
   
   if(strcmp($status,"1")==0)
   {	
     $_SESSION["user_id"] = $id;
      $_SESSION["flag"] = "1";
    }
-     else
-     {
+    else
+    {
          $_SESSION["flag"] = "0";
          echo '<script type="text/javascript">'; 
         echo 'alert("Account not verified, verify it!");'; 
-        echo 'window.location.href = "index.html";';
+        //echo 'window.location.href = "index.html";';
         echo '</script>';
 
      }
