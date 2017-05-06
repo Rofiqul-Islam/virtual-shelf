@@ -42,8 +42,15 @@ Please click this link to activate your account:.
 	  $email = $_POST["email"];
       $reg_no= $_POST["reg_no"];
       $password = $_POST["password"];
+      $test="SELECT * from user WHERE(User_Email='" . $email . "');";
+      $i=0;
+      $result = $conn->query($test);
+      while(mysqli_fetch_assoc($result))
+        $i++;
 
-	 $sql = "INSERT INTO user (User_name, Password, User_Email, DU_REG_NO, User_Image)  values ('".$username."','".$password."','".$email."','".$reg_no."',null)";
+    if($i==0)
+	 {
+        $sql = "INSERT INTO user (User_name, Password, User_Email, DU_REG_NO, User_Image)  values ('".$username."','".$password."','".$email."','".$reg_no."',null)";
 
 	  if($conn->query($sql) )
 		echo "registered Successfully\n";
@@ -51,4 +58,9 @@ Please click this link to activate your account:.
 	   echo "regestration  Failed";
 
 	sendVerificationBySwift($email,$username,"1");
+    }
+    else
+    {
+        echo "<script type='text/javascript'>alert(\"This Email id has been used\");</script>";
+    }
 ?>
