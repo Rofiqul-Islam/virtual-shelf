@@ -64,11 +64,13 @@ if($conn->connect_error)
   
   if(strcmp($status,"1")==0)
   {	
+    session_start();
     $_SESSION["user_id"] = $id;
      $_SESSION["flag"] = "1";
    }
     else
     {
+        session_start();
          $_SESSION["flag"] = "0";
          echo '<script type="text/javascript">'; 
         echo 'alert("Account not verified, verify it!");'; 
