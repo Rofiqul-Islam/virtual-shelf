@@ -1,10 +1,11 @@
 <?php
+session_start();
 function sendVerificationBySwift($email,$name,$id)
 {
     require_once 'lib/swift_required.php';
 
     $subject = 'virtual-shelf | Verification'; // Give the email a subject
-    $address="http://103.28.121.126/virtual-shelf/verify?email=".$email."&hash=".$id;
+    $address="http://103.28.121.126/virtual-shelf/verify.php?email=".$email."&hash=".$id;
     $body = '
  
 Thanks for signing up!
@@ -25,7 +26,7 @@ Please click this link to activate your account:.
         $mailer = Swift_Mailer::newInstance($transport);
 
         $message = Swift_Message::newInstance($subject)
-            ->setFrom(array('noreply@lalbus.com' => 'Lalbus'))
+            ->setFrom(array('noreply@virtualshelf.com' => 'Virutal-Shelf'))
             ->setTo(array($email))
             ->setBody($body);
 
@@ -56,7 +57,16 @@ Please click this link to activate your account:.
 	  else
 	   echo "regestration  Failed";
 
-	sendVerificationBySwift($email,$username,"1");
+        $sql1="SELECT User_ID from user WHERE(User_Email='" . $email . "');";
+
+        $result1 = $conn->query($sql1);
+
+        while($obj=mysqli_fetch_object($result1))
+        $id= $obj->User_ID;
+
+        $_SESSION["user_id"] = $id;
+
+	sendVerificationBySwift($email,$username,$_SESSION["user_id"]);
     }
     else
     {

@@ -53,7 +53,7 @@ if($conn->connect_error)
 		$id= $obj->User_ID;
 
 		$_SESSION["user_id"] = $id;
-		//echo $_SESSION["flag"];
+		
 		
     }
 
@@ -62,10 +62,10 @@ if($conn->connect_error)
    if(strcmp($_SESSION["flag"],"0")==0)
    {
 
-   		echo "<script type='text/javascript'>alert(\"Incorrect Eamil or Password\");</script>";
-   		//header("Location: index.html");
-		//die();
-   	//echo "hello";
+   		echo '<script type="text/javascript">'; 
+        echo 'alert("Incorrect Email or Password");'; 
+        echo 'window.location.href = "index.html";';
+        echo '</script>';
 
    }
    else if(strcmp($_SESSION["flag"],"1")==0)
