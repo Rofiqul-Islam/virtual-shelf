@@ -56,6 +56,12 @@ if (move_uploaded_file($_FILES['userfile']['tmp_name'], $uploadfile)) {
 } else {
    echo "Upload failed";
 }
+echo "</p>";
+echo '<pre>';
+echo 'Here is some more debugging info:';
+print_r($_FILES);
+print "</pre>";
+
       $test="SELECT * from user WHERE(User_Email='" . $email . "');";
       $i=0;
       $result = $conn->query($test);
@@ -82,8 +88,8 @@ if (move_uploaded_file($_FILES['userfile']['tmp_name'], $uploadfile)) {
 
 
 	sendVerificationBySwift($email,$username,$_SESSION["user_id"]);
-    header("Location: ../index.html");
-        die();
+    //header("Location: ../index.html");
+      //  die();
     }
     else
     {
