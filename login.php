@@ -9,7 +9,8 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 
 $email = $_POST['email'];
 
-$pass = md5($_POST['pass']);
+$pass = $_POST['pass'];
+
 //$pass=$_POST['pass'];
 
 

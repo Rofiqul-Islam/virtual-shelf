@@ -41,7 +41,7 @@ Please click this link to activate your account:.
 	  $username = $_POST["username"];
 	  $email = $_POST["email"];
       $reg_no= $_POST["reg_no"];
-      $password = md5($_POST["password"]);
+      $password = $_POST["password"];
       $test="SELECT * from user WHERE(User_Email='" . $email . "');";
       $i=0;
       $result = $conn->query($test);
