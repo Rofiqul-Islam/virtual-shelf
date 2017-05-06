@@ -45,39 +45,38 @@ session_start();
 
 <?php
     if(strcmp($_SESSION["flag"],"1")==0)
-?>
-
-    <div id="container" style="left: 0px;">
+    {
+        echo " <div id="container" style="left: 0px;">
         <section id="content">
             
 <header>
     <div id="pfd">
         <a href="index.html">
-			
+            
             <img src="images/3.png">
-			
+            
         </a>
     </div>
     <div id="preamble" class="home">
         <div class="preamble">
-		
+        
 <p></p></div></div>
-		
+        
   <form class="searchForm" method="get" action="">              
   <input class="searchTerm"  placeholder="Search…" autocomplete="off"/>
   <input type="submit" class="searchBtn" value="GO"/>
-			  <ul class="suggestionBox" style="">
-			  <li><b>a</b>pple</li>
-				  <li><b>a</b>ndroid</li>
-				  <li><b>a</b>mazon</li>
-				  <li><b>a</b>ol</li>
-				  <li><b>a</b>tlanta</li>
-			  </ul>
+              <ul class="suggestionBox" style="">
+              <li><b>a</b>pple</li>
+                  <li><b>a</b>ndroid</li>
+                  <li><b>a</b>mazon</li>
+                  <li><b>a</b>ol</li>
+                  <li><b>a</b>tlanta</li>
+              </ul>
 </form>
 
 
     
-	
+    
 </header>
 
 
@@ -89,15 +88,15 @@ session_start();
 <div id="our-work">
     <ul id="picture">
 
-	
-	
-	
-	
+    
+    
+    
+    
 </ul>
 </div>
 <br><br><br>
 <style>
-		.button {
+        .button {
     background-color:black;
     border: none;
     color: white;
@@ -108,11 +107,11 @@ session_start();
     margin: 4px 2px;
     cursor: pointer;
 }
-	}
+    }
 </style>
 <center>
 <button class="button" onclick="count_up()">
-	next page
+    next page
 </button>
 </center>
 </section>
@@ -132,7 +131,7 @@ session_start();
                 </ul>
                 
                 <div id="legal">
-                	<span>Handcrafted by<br>198seven &copy; 2014 PYAARI</span>
+                    <span>Handcrafted by<br>198seven &copy; 2014 PYAARI</span>
                 </div>
                 
             </div><!-- wrapper -->
@@ -148,10 +147,10 @@ session_start();
                 <a href="about.html">SEMINAR</a></li>
             <li>
                 <a href="what-we-do.html">What we do.</a></li>
-			<li>
+            <li>
                 <a href="logout.php">Logout</a></li>
         </ul>
-	</nav>
+    </nav>
        
        
     <div id="no-script">
@@ -174,11 +173,17 @@ session_start();
     
 
     <script>
-    	$(document).ready(function(){
-	       ReadMore.init();
-    	})
+        $(document).ready(function(){
+           ReadMore.init();
+        })
     </script>
+"
 
+
+    }
+?>
+
+   
 
 </body>
 </html>
