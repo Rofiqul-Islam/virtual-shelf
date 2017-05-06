@@ -48,7 +48,7 @@ if($conn->connect_error)
     {
        
 	         $id="";
-	    $sql1="SELECT (User_ID,status) from user WHERE(User_Email='" . $email . "' 
+	    $sql1="SELECT * from user WHERE(User_Email='" . $email . "' 
 				AND 
 				Password='" . $pass . "');";
 
