@@ -15,7 +15,7 @@ $dbname = "virtualshelf";
       $edition= $_POST["edition"];
       $info=$_POST["info"];
       $review=$_POST["review"];
-      //$image="dkjkdjs";
+      $image=$id.".jpg";
 
      $uploaddir = '/var/www/html/virtual-shelf/upload/';
 $uploadfile = $uploaddir .$id.".jpg";
