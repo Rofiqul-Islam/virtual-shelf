@@ -42,6 +42,20 @@ Please click this link to activate your account:.
 	  $email = $_POST["email"];
       $reg_no= $_POST["reg_no"];
       $password = $_POST["password"];
+      $image=$id.".jpg";
+      $uploaddir = '/var/www/html/virtual-shelf/userpic/';
+      $uploadfile = $uploaddir .$id.".jpg";
+      echo $uploadfile;
+
+      echo "<p>";
+
+if (move_uploaded_file($_FILES['userfile']['tmp_name'], $uploadfile)) {
+  echo "File is valid, and was successfully uploaded.\n";
+  
+
+} else {
+   echo "Upload failed";
+}
       $test="SELECT * from user WHERE(User_Email='" . $email . "');";
       $i=0;
       $result = $conn->query($test);
@@ -50,7 +64,7 @@ Please click this link to activate your account:.
 
     if($i==0)
 	 {
-        $sql = "INSERT INTO user (User_name, Password, User_Email, DU_REG_NO, User_Image,status)  values ('".$username."','".$password."','".$email."','".$reg_no."',null,0)";
+        $sql = "INSERT INTO user (User_name, Password, User_Email, DU_REG_NO, User_Image,status)  values ('".$username."','".$password."','".$email."','".$reg_no."',".$image."',0)";
 
 	  if($conn->query($sql) )
 		echo "registered Successfully\n";
