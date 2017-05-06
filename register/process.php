@@ -60,6 +60,10 @@ Please click this link to activate your account:.
     }
     else
     {
-        echo "<script type='text/javascript'>alert(\"This Email id has been used\");</script>";
+        echo '<script type="text/javascript">'; 
+        echo 'alert("This Email has been used");'; 
+        echo 'window.location.href = "index.html";';
+        echo '</script>';
+
     }
 ?>
