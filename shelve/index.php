@@ -193,13 +193,13 @@
     <nav id="toc">
         <ul>
             <li>
-                <a class="active" href="index.html">All Books</a></li>
+                <a href="javascript:load()">All Books</a></li>
             <li>
                 <a href="javascript:popular()">Popular books</a></li>
             <li>
                 <a href="../show_seminar/index.php">Seminar</a></li>
 			<li>
-                <a href="logout.php">Logout</a></li>
+                <a href="logout.php">Logout</a></li><br><br><br>
 			<li>
 				<div id ="propic">
                    <!-- <img src ="propic.jpg" height="180" width="180">-->
