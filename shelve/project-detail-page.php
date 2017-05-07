@@ -44,6 +44,23 @@
 
     xhttp.send();
 	}
+	function likec()
+	{
+		xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function(){
+        if(this.readyState == 4 && this.status == 200)
+            console.log(this.responseText);
+        //if(!this.responseText.match(""))
+			myObj = JSON.parse(xhttp.responseText);
+			console.log(myObj);
+			document.getElementById("num").innerHTML=myObj['book_like'];
+    };
+    xhttp.open("GET","page.php?id="+book_id,true);
+
+    xhttp.send();
+		
+		
+	}
 	function like()
 	{
 		console.log(book_id);
@@ -51,9 +68,9 @@
 		xhttp.onreadystatechange = function(){
         if(this.readyState == 4 && this.status == 200)
 		{
-			console.log(this.responseText);
+			
 			if(this.responseText=="again")
-				
+				console.log("hello");
 				document.getElementById("msg").innarHTML="you have already liked this";
 		}
 		
@@ -83,12 +100,8 @@
                 <h1 id="book_name"></h1>
                 <h2 id="author_name"></h2>
                 <p id="edition"></p>
-                <br><br><br>
-				<p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera.</p>
-				<p class="space-after">que logro hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original.</p>
-				<h3>Services</h3>
-				<p class="space-after">Identity, E-commerce Website Design & Development</p>
-				<p><a href="http://www.198seven.com/" rel="external" target="_blank">Visit website</a></p>
+                
+				
 			</div>
             
             <ul id="links">
