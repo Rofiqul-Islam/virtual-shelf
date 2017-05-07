@@ -12,8 +12,10 @@ $con = mysqli_connect('localhost', 'virtualshelf', 'helloworld', 'virtualshelf')
 		echo "again";
 	else
 	{
+		
 		$sql = "INSERT INTO liked_books(User_ID, book_id) VALUES ('".$user_id."','".$book_id."')";
 		$result = mysqli_query($con, $sql);
+		echo "done";
 	}
 
 
