@@ -21,6 +21,7 @@
 </head>
 <script type="text/javascript">
  load_num=50;
+ 
  function load(){
     propicload();
 	 xhttp = new XMLHttpRequest();
@@ -45,6 +46,19 @@
             }
         xhttp.open("GET","propic.php",true);
         xhttp.send();
+ }
+ function popular()
+ {
+	 xhttp = new XMLHttpRequest();
+	 xhttp.onreadystatechange = function(){
+		if(this.readyState == 4 && this.status == 200)
+			console.log(this.responseText);
+		//if(!this.responseText.match(""))
+			document.getElementById("picture").innerHTML=xhttp.responseText;
+			}
+		xhttp.open("GET","popular.php",true);
+		xhttp.send();
+	 
  }
  function count_up()
  {
@@ -164,11 +178,11 @@
     <nav id="toc">
         <ul>
             <li>
-                <a class="active" href="index.html">Populer books</a></li>
+                <a class="active" href="index.html">All Books</a></li>
             <li>
-                <a href="about.html">SEMINAR</a></li>
+                <a href="popular()">Popular books</a></li>
             <li>
-                <a href="what-we-do.html">What we do.</a></li>
+                <a href="../show_seminar/index.php">Seminar</a></li>
 			<li>
                 <a href="logout.php">Logout</a></li>
 			<li>
@@ -177,17 +191,12 @@
                    
                 </div>
 			</li>
+			
         </ul>
 	</nav>
        
        
-    <div id="no-script">
-        <div>
-            <p>
-                The Pyaari website is fully responsive and requires Javascript.<br>
-                Please <a href="http://enable-javascript.com/">enable javascript</a> to use this site without issue.</p>
-        </div>
-    </div><!-- no-script -->
+   
     
     
     <script src="ajax/jquery-1.11.0.min.js"></script>
