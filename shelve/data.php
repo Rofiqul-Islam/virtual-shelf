@@ -19,8 +19,7 @@ $ch_image=$obj->Image;
 $book_id=$obj->book_id;
 $like=$obj->book_like;
 
-$data=$data."<li><a href=\"project-detail-page.php?data=".$book_id."\"><img src="."default.jpg"."><h2>".$books_name."</h2><div class=\"overlay\"><summary><h2>".$books_name."</h2><h3>".$author_name."</h3></summary><><div class=\"loves\"><span>".$like."</span></div></div></a></li>";
-
+$data=$data."<li><a href=\"project-detail-page.php?data=".$book_id."\"><img src=".$ch_image."><h class =\"caption\">".$books_name."</h><div class=\"overlay\"><summary><h2>".$books_name."</h2><h3>".$author_name."</h3></summary><><div class=\"loves\"><span></span></div></div></a></li>";
 
 if($var==0)break;
 $var--;

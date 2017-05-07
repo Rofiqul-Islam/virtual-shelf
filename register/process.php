@@ -44,7 +44,7 @@ Please click this link to activate your account:.
       $password = $_POST["password"];
       $image=$username.".jpg";
       $uploaddir = '/var/www/html/virtual-shelf/userpic/';
-      $uploadfile = $uploaddir .$username.".jpg";
+      $uploadfile = $uploaddir .str_replace(' ','_',$username).".jpg";
       echo $uploadfile;
 
       echo "<p>";

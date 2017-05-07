@@ -89,7 +89,20 @@
 </header>
 
 
-
+<style>
+.caption { 
+	color: white; 
+   font: bold 15px Helvetica, Sans-Serif; 
+   position: absolute;
+	
+   bottom:10%; 
+   left: 0; 
+   width: 100% 
+   background: rgb(1, 1, 1); /* fallback color */
+   background: rgba(1, 1, 1, 0.7);
+   padding: 10px; 
+}
+</style>
 
 
 
