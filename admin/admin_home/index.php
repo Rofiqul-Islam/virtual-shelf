@@ -140,9 +140,9 @@
 
 <div id="our-work">
     <ul id="picture">
-    <li><a href="../book_update/book_update.html"><img src="boi.jpg"><h class ="caption">Add New Book</h><div class=\"overlay\"><summary><h2>Add New Book</h2></summary></a></li>"
+    <li><a href="../book_update/book_update.html"><img src="boi.jpg"><h class ="caption">Add New Book</h><div class="overlay"><summary><h2>Add New Book</h2></summary></a></li>"
 
-	<li><a href="../add_seminar/index.html"><img src="seminar.jpg"><h class ="caption">Add New Seminar</h><div class=\"overlay\"><summary><h2>Add New Seminar</h2></summary></a></li>"
+	<li><a href="../add_seminar/index.html"><img src="seminar.jpg"><h class ="caption">Add New Seminar</h><div class="overlay"><summary><h2>Add New Seminar</h2></summary></a></li>"
 	
 	
 	
