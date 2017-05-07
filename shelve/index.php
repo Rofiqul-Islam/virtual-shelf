@@ -180,7 +180,7 @@
             <li>
                 <a class="active" href="index.html">All Books</a></li>
             <li>
-                <a href="popular()">Popular books</a></li>
+                <a href="javascript:popular()">Popular books</a></li>
             <li>
                 <a href="../show_seminar/index.php">Seminar</a></li>
 			<li>
