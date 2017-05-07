@@ -65,6 +65,25 @@
 	load_num+=50;
 	load();
  }
+ function check()
+		{
+			var nameit= document.getElementById("search");
+			var name=nameit.value;
+			//console.log(name);
+			
+			var xhttp=new XMLHttpRequest();
+			xhttp.onreadystatechange = function(){
+				if(this.readyState==4&&this.status==200)
+				{
+					var response =xhttp.responseText;
+					console.log(this.response);
+					document.getElementById("picture").innerHTML=this.response;
+				}
+			}
+			xhttp.open("GET","search.php",true);
+			xhttp.send();
+			
+		}
  window.onload = load;
 
 </script>
@@ -88,12 +107,10 @@
 		
 <p></p></div></div>
 		
-  <form class="searchForm" method="get" action="">              
-  <input class="searchTerm"  placeholder="Search…" autocomplete="off"/>
-  <input type="submit" class="searchBtn" value="GO"/>
-			  <ul class="suggestionBox" style="">
+  <form class="searchForm">              
+  <input class="searchTerm"  placeholder="Search…" id="search" type= "text" onkeyup="check()" /> 
+			  <ul class="" id="box">
 				
-				 
 			  </ul>
 </form>
 
