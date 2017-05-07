@@ -46,12 +46,14 @@
 	}
 	function like()
 	{
-		
+		console.log(book_id);
 		xhttp = new XMLHttpRequest();
 		xhttp.onreadystatechange = function(){
         if(this.readyState == 4 && this.status == 200)
 		{
+			console.log(this.responseText);
 			if(this.responseText=="again")
+				
 				document.getElementById("msg").innarHTML="you have already liked this";
 		}
 		
