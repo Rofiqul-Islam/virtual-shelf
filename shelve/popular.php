@@ -4,7 +4,6 @@ if($con->connect_errno>0) echo "not connected";
 $image="default.jpg";
 $books_name;
 $author_name;
-$var=$_GET['num'];
 $data="";
 $sql="select book_id, book_name, book_author, Image, book_like from book order by book_like DESC LIMIT 51";
 $ch_image;
