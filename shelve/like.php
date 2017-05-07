@@ -6,7 +6,7 @@ $con = mysqli_connect('localhost', 'virtualshelf', 'helloworld', 'virtualshelf')
     if ($con->connect_errno > 0) echo "not connected";
     $sql = "update book set book_like =book_like+1 where book_id=".$book_id;
 	$result = mysqli_query($con, $sql);
-	$sql = "select * from liked_books where User_ID=".$user_id."and book_id=".$book_id;
+	$sql = "select * from liked_books where User_ID=".$user_id." and book_id=".$book_id;
 	$result = mysqli_query($con, $sql);
 	
 	echo $result->num_rows;
