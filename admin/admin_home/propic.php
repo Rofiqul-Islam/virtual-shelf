@@ -3,7 +3,7 @@ session_start();
 $id=$_SESSION["user_id"];
 $con = mysqli_connect('localhost', 'virtualshelf', 'helloworld','virtualshelf');
 if($con->connect_errno>0) echo "not connected";
-$sql="select User_Image, User_Name from user where User_ID=".$id;
+$sql="select image, name from admin where admin_id=".$id;
 //$image="default.jpg";
 //$books_name;
 //$author_name;
@@ -16,11 +16,11 @@ $result = mysqli_query($con,$sql);
 
 
 while($obj=mysqli_fetch_assoc($result)){
-	if($obj["User_Image"]==NULL)
+	if($obj["image"]==NULL)
 	$data=$data."<img src=\"/virtual-shelf/userpic/propic.jpg\" height=\"180\" width=\"180\">";
 
 	else {
-	 	$data=$data."<img src=\"/virtual-shelf/userpic/".$obj["User_Image"]."\" height=\"180\" width=\"180\"><h class=\"caption\">".$obj["User_Name"]."</h>";
+	 	$data=$data."<img src=\"/virtual-shelf/userpic/".$obj["image"]."\" height=\"180\" width=\"180\"><h class=\"caption\">".$obj["name"]."</h>";
 	 } 
 
 //$books_name = $obj->book_name;
