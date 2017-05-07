@@ -70,9 +70,11 @@
 		{
 			var response=this.responseText;
             console.log(response);
-			if(response=="again")
-				console.log("hello");
-				document.getElementById("msg").innarHTML="you have already liked this";
+			if(response=="again") {
+                console.log("hello");
+                document.getElementById("msg").innarHTML = "you have already liked this";
+            }
+            else likec();
 		}
 		
     };

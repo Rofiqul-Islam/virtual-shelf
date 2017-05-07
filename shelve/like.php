@@ -9,7 +9,7 @@ $con = mysqli_connect('localhost', 'virtualshelf', 'helloworld', 'virtualshelf')
 	$sql = "select * from liked_books where User_ID=".$user_id." and book_id=".$book_id;
 	$result = mysqli_query($con, $sql);
 	
-	echo $result->num_rows;
+	//echo $result->num_rows;
 	
 	if($result->num_rows>0)
 		echo "again";
