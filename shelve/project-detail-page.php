@@ -26,7 +26,7 @@
 	function load(){
     book_id=<?php echo $_GET['data'];?>;
     console.log(book_id);
-
+	propicload();
     xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function(){
         if(this.readyState == 4 && this.status == 200)
@@ -83,6 +83,17 @@
     xhttp.send();
 		
 	}
+	 function propicload(){
+     xhttp = new XMLHttpRequest();
+     xhttp.onreadystatechange = function(){
+        if(this.readyState == 4 && this.status == 200)
+            console.log(this.responseText);
+        //if(!this.responseText.match(""))
+            document.getElementById("propic").innerHTML=this.responseText;
+            }
+        xhttp.open("GET","propic.php",true);
+        xhttp.send();
+ }
  window.onload = load;
 </script>
 
@@ -153,21 +164,20 @@
     <nav id="toc">
         <ul>
             <li>
-                <a href="index.html">Work.</a></li>
+                <a href="index.php">All Books</a></li>
             <li>
-                <a href="about.html">About.</a></li>
+                <a href="../show_seminar/index.php"></a>Seminar</li>
+			<li>
+				<div id ="propic">
+					
+				</div>
+			</li>
             <li>
-                <a href="what-we-do.html">What we do.</a></li>
+                 <a href="logout.php">Logout</a></li>
         </ul>
 	</nav>
     
-    <div id="no-script">
-        <div>
-            <p>
-                The Pyaari website is fully responsive and requires Javascript.<br />
-                Please <a href="http://enable-javascript.com/">enable javascript</a> to use this site without issue.</p>
-        </div>
-    </div><!-- no-script -->
+
     
   <script src="ajax/jquery-1.11.0.min.js"></script>
     <script src="lib/underscore-min.js"></script>  
