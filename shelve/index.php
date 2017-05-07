@@ -41,7 +41,7 @@
         if(this.readyState == 4 && this.status == 200)
             console.log(this.responseText);
         //if(!this.responseText.match(""))
-            //document.getElementById("propic").innerHTML=xhttp.responseText;
+            document.getElementById("propic").innerHTML=this.responseText;
             }
         xhttp.open("GET","propic.php",true);
         xhttp.send();
@@ -161,7 +161,7 @@
 			<li>
 				<div id ="propic">
                    <!-- <img src ="propic.jpg" height="180" width="180">-->
-                   <img src="/virtual-shelf/userpic/rf.jpg" height="180" width="180">
+                   
                 </div>
 			</li>
         </ul>
