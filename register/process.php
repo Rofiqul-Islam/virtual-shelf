@@ -92,7 +92,7 @@ print "</pre>";
 
 
 	sendVerificationBySwift($email,$username,$_SESSION["user_id"]);
-    header("Location: ../index.html");
+    header("Location: ../login/index.html");
         die();
     }
     else
