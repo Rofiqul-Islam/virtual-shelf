@@ -71,7 +71,10 @@ print "</pre>";
 
     if($i==0)
 	 {
-        $sql = "INSERT INTO user (User_name, Password, User_Email, DU_REG_NO, User_Image,status)  values ('".$username."','".$password."','".$email."','".$reg_no."','".$img."','0')";
+        if($_FILES['userfile']!=NULL)
+        $sql = "INSERT INTO user (User_name, Password, User_Email, DU_REG_NO, User_Image,status)  values ('".$username."','".$password."','".$email."','".$reg_no."','".$image."','0')";
+    else
+    	$sql = "INSERT INTO user (User_name, Password, User_Email, DU_REG_NO,status)  values ('".$username."','".$password."','".$email."','".$reg_no."','0')";
 
 	  if($conn->query($sql) )
 		echo "registered Successfully\n";
