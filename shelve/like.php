@@ -1,6 +1,6 @@
 <?php
 session_start();
-$user_id=$_SESSION['user_id']
+$user_id=$_SESSION['user_id'];
 $book_id=$_GET['id'];
 $con = mysqli_connect('localhost', 'virtualshelf', 'helloworld', 'virtualshelf');
     if ($con->connect_errno > 0) echo "not connected";
