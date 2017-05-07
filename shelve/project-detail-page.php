@@ -51,7 +51,7 @@
 		xhttp.onreadystatechange = function(){
         if(this.readyState == 4 && this.status == 200)
 		{
-			if(this.responseText.equals("again")==true)
+			if(this.responseText=="again")
 				document.getElementById("msg").innarHTML="you have already liked this";
 		}
 		
