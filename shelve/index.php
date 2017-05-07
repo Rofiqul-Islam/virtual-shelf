@@ -32,12 +32,26 @@
 		xhttp.open("GET","data.php?num="+load_num,true);
 		xhttp.send();
  }
+
+
+ function propicload(){
+     xhttp = new XMLHttpRequest();
+     xhttp.onreadystatechange = function(){
+        if(this.readyState == 4 && this.status == 200)
+            console.log(this.responseText);
+        //if(!this.responseText.match(""))
+            document.getElementById("propic").innerHTML=xhttp.responseText;
+            }
+        xhttp.open("GET","propic.php",true);
+        xhttp.send();
+ }
  function count_up()
  {
 	load_num+=50;
 	load();
  }
  window.onload = load;
+ window.onload=propicload;
 </script>
 <body>
 
@@ -144,7 +158,9 @@
 			<li>
                 <a href="logout.php">Logout</a></li>
 			<li>
-				<img src ="propic.jpg" height="180" width="180">
+				<div id ="propic">
+                   <!-- <img src ="propic.jpg" height="180" width="180">-->
+                </div>
 			</li>
         </ul>
 	</nav>
