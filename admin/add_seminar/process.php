@@ -1,5 +1,5 @@
 <?php
-      $conn = mysqli_connect('localhost', 'root', '','webproject');
+      $conn = mysqli_connect('localhost', 'virtualshelf', 'helloworld','virtualshelf');
 	  if($conn->connect_errno>0) echo "not connected";
 	  else echo "connected";
 
