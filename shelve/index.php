@@ -80,7 +80,7 @@
 					document.getElementById("picture").innerHTML=this.response;
 				}
 			}
-			xhttp.open("GET","search.php",true);
+			xhttp.open("GET","search.php?search="+name,true);
 			xhttp.send();
 			
 		}
@@ -183,9 +183,7 @@
                     </li>
                 </ul>
                 
-                <div id="legal">
-                	<span>Handcrafted by<br>198seven &copy; 2014 PYAARI</span>
-                </div>
+             
                 
             </div><!-- wrapper -->
         </footer><!-- footer -->
