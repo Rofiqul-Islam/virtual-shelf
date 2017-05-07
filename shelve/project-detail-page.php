@@ -69,10 +69,10 @@
         if(this.readyState == 4 && this.status == 200)
 		{
 			var response=this.responseText;
-            console.log(response);
+
 			if(response=="again") {
                 console.log("hello");
-                document.getElementById("msg").innarHTML = "you have already liked this";
+
             }
             else likec();
 		}
@@ -109,12 +109,15 @@
             
             <ul id="links">
                 <li>
-                    <a href="index.html" id="home">Home</a>
+                    <a href="index.php" id="home">Home</a>
                 </li>
                 <li>
                     <a id="ilovethis" onclick= like() ><span id="num"></span></a>
                 </li>
-				<li id="msg"></li>
+
+            </ul>
+            <ul id="reviews">
+
             </ul>
 		</header>
     </div>
