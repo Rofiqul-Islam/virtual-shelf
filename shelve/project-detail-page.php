@@ -22,7 +22,8 @@
     <script src="lib/modernizr-2.6.2.js"></script>
 </head>
 <script>
-
+ var book_id;
+	function load(){
     book_id=<?php echo $_GET['data'];?>;
     console.log(book_id);
 
@@ -37,12 +38,32 @@
 		document.getElementById("author_name").innerHTML=myObj['book_author'];
 		document.getElementById("edition").innerHTML=myObj['edition']+" edition";
 		document.getElementById("work-visuals").innerHTML="</br></br></br></br></br><li data-visual=\"website-design-florentina-norfolk\"><img src=\""+myObj['Image']+"\"></li>";
+		document.getElementById("num").innerHTML=myObj['book_like'];
     };
     xhttp.open("GET","page.php?id="+book_id,true);
 
     xhttp.send();
+	}
+	function like()
+	{
+		
+		xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function(){
+        if(this.readyState == 4 && this.status == 200)
+		{
+			if(this.responseText.equals("again")==true)
+				document.getElementById("msg").innarHTML="you have already liked this";
+		}
+		
+    };
+    xhttp.open("GET","like.php?id="+book_id,true);
 
+    xhttp.send();
+		
+	}
+ window.onload = load;
 </script>
+
 <body>
     <div id="container">
         <section id="content">
@@ -73,8 +94,9 @@
                     <a href="index.html" id="home">Home</a>
                 </li>
                 <li>
-                    <a id="ilovethis"><span>77</span></a>
+                    <a id="ilovethis" onclick= like() ><span id="num"></span></a>
                 </li>
+				<li id="msg"></li>
             </ul>
 		</header>
     </div>
