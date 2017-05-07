@@ -69,7 +69,7 @@ if($conn->connect_error)
     session_start();
     $_SESSION["admin_id"] = $id;
       $conn->close();
-    header("Location: /admin_home/index.php");
+    header("Location: admin_home/index.php");
     die();
     
    }
