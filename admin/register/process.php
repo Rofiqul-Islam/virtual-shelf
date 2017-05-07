@@ -5,7 +5,7 @@ function sendVerificationBySwift($email,$name,$id)
     require_once 'lib/swift_required.php';
 
     $subject = 'virtual-shelf | Verification'; // Give the email a subject
-    $address="http://103.28.121.126/virtual-shelf/verify.php?email=".$email."&id=".$_SESSION["user_id"];
+    $address="http://103.28.121.126/virtual-shelf/admin/verify.php?email=".$email."&id=".$_SESSION["user_id"];
     $body = '
  
 Thanks for signing up!
@@ -40,7 +40,7 @@ Please click this link to activate your account:.
 
 	  $username = $_POST["username"];
 	  $email = $_POST["email"];
-      $reg_no= $_POST["reg_no"];
+      
       $password = $_POST["password"];
       $image=$username.".jpg";
       $uploaddir = '/var/www/html/virtual-shelf/userpic/';
@@ -63,7 +63,7 @@ echo 'Here is some more debugging info:';
 print_r($_FILES);
 print "</pre>";
 
-      $test="SELECT * from user WHERE(User_Email='" . $email . "');";
+      $test="SELECT * from admin WHERE(email='" . $email . "');";
       $i=0;
       $result = $conn->query($test);
       while(mysqli_fetch_assoc($result))
@@ -72,23 +72,23 @@ print "</pre>";
     if($i==0)
 	 {
         if($_FILES['userfile']['tmp_name']!=NULL)
-        $sql = "INSERT INTO user (User_name, Password, User_Email, DU_REG_NO, User_Image,status)  values ('".$username."','".$password."','".$email."','".$reg_no."','".$img."','0')";
+        $sql = "INSERT INTO admin (name, password, email, image,status)  values ('".$username."','".$password."','".$email."','".$img."','0')";
     else
-    	$sql = "INSERT INTO user (User_name, Password, User_Email, DU_REG_NO,status)  values ('".$username."','".$password."','".$email."','".$reg_no."','0')";
+    	$sql = "INSERT INTO admin (name, password, email,status)  values ('".$username."','".$password."','".$email."','0')";
 
 	  if($conn->query($sql) )
 		echo "registered Successfully\n";
 	  else
 	   echo "regestration  Failed";
 
-        $sql1="SELECT User_ID from user WHERE(User_Email='" . $email . "');";
+        $sql1="SELECT admin_id from admin WHERE(email='" . $email . "');";
 
         $result1 = $conn->query($sql1);
 
         while($obj=mysqli_fetch_object($result1))
-        $id= $obj->User_ID;
+        $id= $obj->admin_id;
 
-        $_SESSION["user_id"] = $id;
+        $_SESSION["admin_id"] = $id;
 
 
 	sendVerificationBySwift($email,$username,$_SESSION["user_id"]);

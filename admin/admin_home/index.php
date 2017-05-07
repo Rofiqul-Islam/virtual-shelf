@@ -24,15 +24,15 @@
  
  function load(){
     propicload();
-	 xhttp = new XMLHttpRequest();
-	 xhttp.onreadystatechange = function(){
-		if(this.readyState == 4 && this.status == 200)
-			console.log(this.responseText);
+	 //xhttp = new XMLHttpRequest();
+	// xhttp.onreadystatechange = function(){
+		//if(this.readyState == 4 && this.status == 200)
+			//console.log(this.responseText);
 		//if(!this.responseText.match(""))
-			document.getElementById("picture").innerHTML=xhttp.responseText;
+			//document.getElementById("picture").innerHTML=xhttp.responseText;
 			}
-		xhttp.open("GET","data.php?num="+load_num,true);
-		xhttp.send();
+		//xhttp.open("GET","data.php?num="+load_num,true);
+	//	xhttp.send();
  }
 
 
@@ -47,25 +47,25 @@
         xhttp.open("GET","propic.php",true);
         xhttp.send();
  }
- function popular()
+/* function popular()
  {
 	 xhttp = new XMLHttpRequest();
 	 xhttp.onreadystatechange = function(){
 		if(this.readyState == 4 && this.status == 200)
 			console.log(this.responseText);
 		//if(!this.responseText.match(""))
-			document.getElementById("picture").innerHTML=xhttp.responseText;
+			//document.getElementById("picture").innerHTML=xhttp.responseText;
 			}
 		xhttp.open("GET","popular.php",true);
 		xhttp.send();
 	 
- }
+ }*/
  function count_up()
  {
 	load_num+=50;
 	load();
  }
- function check()
+ /*function check()
 		{
 			var nameit= document.getElementById("search");
 			var name=nameit.value;
@@ -77,13 +77,13 @@
 				{
 					var response =xhttp.responseText;
 					console.log(this.response);
-					document.getElementById("picture").innerHTML=this.response;
+					//document.getElementById("picture").innerHTML=this.response;
 				}
 			}
 			xhttp.open("GET","search.php?search="+name,true);
 			xhttp.send();
 			
-		}
+		}*/
  window.onload = load;
 
 </script>
@@ -107,12 +107,12 @@
 		
 <p></p></div></div>
 		
-  <form class="searchForm">              
+ <!-- <form class="searchForm">              
   <input class="searchTerm"  placeholder="Search…" id="search" type= "text" onkeyup="check()" /> 
 			  <ul class="" id="box">
 				
 			  </ul>
-</form>
+</form>-->
 
 
     
@@ -140,8 +140,9 @@
 
 <div id="our-work">
     <ul id="picture">
+    <li><a href="../book_update/book_update.html"><img src="boi.jpg"><h class ="caption">Add New Book</h><div class=\"overlay\"><summary><h2>Add New Book</h2></summary></a></li>"
 
-	
+	<li><a href="../add_seminar/index.html"><img src="seminar.jpg"><h class ="caption">Add New Seminar</h><div class=\"overlay\"><summary><h2>Add New Seminar</h2></summary></a></li>"
 	
 	
 	
@@ -163,9 +164,9 @@
 	}
 </style>
 <center>
-<button class="button" onclick="count_up()">
+<!--<button class="button" onclick="count_up()">
 	next page
-</button>
+</button>-->
 </center>
 </section>
 
@@ -192,12 +193,12 @@
     
     <nav id="toc">
         <ul>
-            <li>
+           <!-- <li>
                 <a class="active" href="index.html">All Books</a></li>
             <li>
                 <a href="javascript:popular()">Popular books</a></li>
             <li>
-                <a href="../show_seminar/index.php">Seminar</a></li>
+                <a href="../show_seminar/index.php">Seminar</a></li>-->
 			<li>
                 <a href="logout.php">Logout</a></li>
 			<li>
