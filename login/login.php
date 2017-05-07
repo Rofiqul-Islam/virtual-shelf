@@ -69,7 +69,7 @@ if($conn->connect_error)
     session_start();
     $_SESSION["user_id"] = $id;
       $conn->close();
-    header("Location: shelve/index.php");
+    header("Location: ../shelve/index.php");
     die();
     
    }
