@@ -7,6 +7,6 @@
 	else
 	{
 		//echo "hek";
-		header('Location: ../index.html');
+		header('Location: /virtual-shelf/index.html');
 	}
 ?>
