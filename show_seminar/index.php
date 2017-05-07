@@ -7,7 +7,7 @@
     <!-- Meta info -->
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SEMINAR LIST</title>
+    <title>virtual shelf</title>
     <meta content="" name="description">
     <meta name="author" content="">
     <meta name="format-detection" content="">
@@ -22,6 +22,7 @@
 <script type="text/javascript">
  load_num=50;
  function load(){
+    propicload();
 	 xhttp = new XMLHttpRequest();
 	 xhttp.onreadystatechange = function(){
 		if(this.readyState == 4 && this.status == 200)
@@ -32,14 +33,30 @@
 		xhttp.open("GET","data.php?num="+load_num,true);
 		xhttp.send();
  }
+
+
+ function propicload(){
+     xhttp = new XMLHttpRequest();
+     xhttp.onreadystatechange = function(){
+        if(this.readyState == 4 && this.status == 200)
+            console.log(this.responseText);
+        //if(!this.responseText.match(""))
+            document.getElementById("propic").innerHTML=this.responseText;
+            }
+        xhttp.open("GET","propic.php",true);
+        xhttp.send();
+ }
  function count_up()
  {
 	load_num+=50;
 	load();
  }
  window.onload = load;
+
 </script>
 <body>
+
+
 
     <div id="container" style="left: 0px;">
         <section id="content">
@@ -61,11 +78,8 @@
   <input class="searchTerm"  placeholder="Search…" autocomplete="off"/>
   <input type="submit" class="searchBtn" value="GO"/>
 			  <ul class="suggestionBox" style="">
-			  <li><b>a</b>pple</li>
-				  <li><b>a</b>ndroid</li>
-				  <li><b>a</b>mazon</li>
-				  <li><b>a</b>ol</li>
-				  <li><b>a</b>tlanta</li>
+				
+				 
 			  </ul>
 </form>
 
@@ -75,7 +89,20 @@
 </header>
 
 
-
+<style>
+.caption { 
+	color: white; 
+   font: bold 15px Helvetica, Sans-Serif; 
+   position: absolute;
+	
+   bottom:10%; 
+   left: 0; 
+   width: 100% 
+   background: rgb(1, 1, 1); /* fallback color */
+   background: rgba(1, 1, 1, 0.7);
+   padding: 10px; 
+}
+</style>
 
 
 
@@ -125,7 +152,9 @@
                     </li>
                 </ul>
                 
-                
+                <div id="legal">
+                	<span>Handcrafted by<br>198seven &copy; 2014 PYAARI</span>
+                </div>
                 
             </div><!-- wrapper -->
         </footer><!-- footer -->
@@ -135,12 +164,19 @@
     <nav id="toc">
         <ul>
             <li>
-                <a class="active" href="../shelve/index.html">Book Library</a></li>
+                <a class="active" href="index.html">Populer books</a></li>
             <li>
-                <a href="about.html">About.</a></li>
-            
+                <a href="about.html">SEMINAR</a></li>
+            <li>
+                <a href="what-we-do.html">What we do.</a></li>
 			<li>
-                <a href="../LOGIN/index.html">Logout</a></li>
+                <a href="logout.php">Logout</a></li>
+			<li>
+				<div id ="propic">
+                   <!-- <img src ="propic.jpg" height="180" width="180">-->
+                   
+                </div>
+			</li>
         </ul>
 	</nav>
        
@@ -148,7 +184,8 @@
     <div id="no-script">
         <div>
             <p>
-               
+                The Pyaari website is fully responsive and requires Javascript.<br>
+                Please <a href="http://enable-javascript.com/">enable javascript</a> to use this site without issue.</p>
         </div>
     </div><!-- no-script -->
     

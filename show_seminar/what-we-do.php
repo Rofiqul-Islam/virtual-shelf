@@ -1,3 +1,4 @@
+<?php include 'access_controled.php'; ?>
 <!DOCTYPE html>
 <html class="no-js">
 <head>

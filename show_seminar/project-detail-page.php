@@ -8,7 +8,7 @@
     <!-- Meta info -->
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>seminardetails</title>
+    <title>Project Detail | 198seven</title>
     <meta content="" name="description" />
     <link rel="Shortcut Icon" type="image/x-icon" href="#" />
     
@@ -22,8 +22,9 @@
     <script src="lib/modernizr-2.6.2.js"></script>
 </head>
 <script>
-
-    seminar_id=<?php echo $_GET['data'];?>;
+ var book_id;
+	function load(){
+    book_id=<?php echo $_GET['data'];?>;
     console.log(book_id);
 
     xhttp = new XMLHttpRequest();
@@ -33,16 +34,58 @@
         //if(!this.responseText.match(""))
 			myObj = JSON.parse(xhttp.responseText);
 			console.log(myObj);
-        //document.getElementById("book_name").innerHTML=myObj.book_name;
-		//document.getElementById("author_name").innerHTML=myObj.author_name;
-		//document.getElementById("edition").innerHTML=myObj.edition;
-		//document.getElementById("image").innerHTML="<li data-visual=\"website-design-florentina-norfolk\"><img src=\"PRESS.jpg\"></li>";
+        document.getElementById("book_name").innerHTML=myObj['book_name'];
+		document.getElementById("author_name").innerHTML=myObj['book_author'];
+		document.getElementById("edition").innerHTML=myObj['edition']+" edition";
+		document.getElementById("work-visuals").innerHTML="</br></br></br></br></br><li data-visual=\"website-design-florentina-norfolk\"><img src=\""+myObj['Image']+"\"></li>";
+		document.getElementById("num").innerHTML=myObj['book_like'];
     };
     xhttp.open("GET","page.php?id="+book_id,true);
 
     xhttp.send();
+	}
+	function likec()
+	{
+		xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function(){
+        if(this.readyState == 4 && this.status == 200)
+            console.log(this.responseText);
+        //if(!this.responseText.match(""))
+			myObj = JSON.parse(xhttp.responseText);
+			console.log(myObj);
+			document.getElementById("num").innerHTML=myObj['book_like'];
+    };
+    xhttp.open("GET","page.php?id="+book_id,true);
 
+    xhttp.send();
+		
+		
+	}
+	function like()
+	{
+		console.log(book_id);
+		xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function(){
+        if(this.readyState == 4 && this.status == 200)
+		{
+			var response=this.responseText;
+
+			if(response=="again") {
+                console.log("hello");
+
+            }
+            else likec();
+		}
+		
+    };
+    xhttp.open("GET","like.php?id="+book_id,true);
+
+    xhttp.send();
+		
+	}
+ window.onload = load;
 </script>
+
 <body>
     <div id="container">
         <section id="content">
@@ -52,7 +95,7 @@
 		<header>
 			<div id="pfd">
 				<a href="index.html">
-            		<img src="images/pyaari-logo.png" >
+            		<img src="images/pyaari-logo.png" alt="Pyaari Website - For Website and Graphic Designers">
         		</a>
             </div>
             
@@ -60,45 +103,30 @@
                 <h1 id="book_name"></h1>
                 <h2 id="author_name"></h2>
                 <p id="edition"></p>
-                <br><br><br>
-				<p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera.</p>
-				<p class="space-after">que logro hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original.</p>
-				<h3>Services</h3>
-				<p class="space-after">Identity, E-commerce Website Design & Development</p>
-				<p><a href="http://www.198seven.com/" rel="external" target="_blank">Visit website</a></p>
+                
+				
 			</div>
             
             <ul id="links">
                 <li>
-                    <a href="index.html" id="home">Home</a>
+                    <a href="index.php" id="home">Home</a>
                 </li>
                 <li>
-                    <a id="ilovethis"><span>77</span></a>
+                    <a id="ilovethis" onclick= like() ><span id="num"></span></a>
                 </li>
+
+            </ul>
+            <ul id="reviews">
+
             </ul>
 		</header>
     </div>
     
     <div id="work-visuals">
-    	<ul id="image>
-
-        <li data-visual=\"website-design-florentina-norfolk\"><img src="PRESS.jpg"></li>
-			
-			
-		</ul>
-    </div>
-    
-    <footer>
-        <ul id="other-projects">
-            <li>
-                <a class="previous-work" href="" rel="prev">Lorem Ipsum</a>
-            </li>
-            <li>
-                <a class="next-work" href="" rel="next">Lorem Ipsum</a>
-            </li>
-        </ul>
-    </footer>
-</div>
+    	
+            
+        
+	</div>
 </section>
 
 
