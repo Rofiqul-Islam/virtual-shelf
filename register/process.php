@@ -44,7 +44,8 @@ Please click this link to activate your account:.
       $password = $_POST["password"];
       $image=$username.".jpg";
       $uploaddir = '/var/www/html/virtual-shelf/userpic/';
-      $uploadfile = $uploaddir .str_replace(' ','_',$username).".jpg";
+	  $img=str_replace(' ','_',$username).".jpg";
+      $uploadfile = $uploaddir .$img;
       echo $uploadfile;
 
       echo "<p>";
@@ -70,7 +71,7 @@ print "</pre>";
 
     if($i==0)
 	 {
-        $sql = "INSERT INTO user (User_name, Password, User_Email, DU_REG_NO, User_Image,status)  values ('".$username."','".$password."','".$email."','".$reg_no."','".$image."','0')";
+        $sql = "INSERT INTO user (User_name, Password, User_Email, DU_REG_NO, User_Image,status)  values ('".$username."','".$password."','".$email."','".$reg_no."','".$img."','0')";
 
 	  if($conn->query($sql) )
 		echo "registered Successfully\n";
