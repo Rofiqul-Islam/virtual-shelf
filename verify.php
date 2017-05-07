@@ -12,7 +12,7 @@ echo $id;
 	$result1 = $conn->query($sql);
 		$conn->close();
 
-	header("Location: index.html");
+	header("Location: login/index.html");
         die();
 
 ?>
