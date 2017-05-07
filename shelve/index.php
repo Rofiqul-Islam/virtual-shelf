@@ -22,6 +22,7 @@
 <script type="text/javascript">
  load_num=50;
  function load(){
+    propicload();
 	 xhttp = new XMLHttpRequest();
 	 xhttp.onreadystatechange = function(){
 		if(this.readyState == 4 && this.status == 200)
@@ -51,7 +52,7 @@
 	load();
  }
  window.onload = load;
- window.onload=propicload;
+
 </script>
 <body>
 

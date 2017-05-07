@@ -17,10 +17,10 @@ $result = mysqli_query($con,$sql);
 
 while($obj=mysqli_fetch_assoc($result)){
 	if($obj["User_Image"]==NULL)
-	$data=$data."<img src=\"/var/www/html/virtual-shelf/userpic/propic.jpg\" height=\"180\" width=\"180\">";
+	$data=$data."<img src=\"/virtual-shelf/userpic/propic.jpg\" height=\"180\" width=\"180\">";
 
 	else {
-	 	$data=$data."<img src=\"/var/www/html/virtual-shelf/userpic/".$obj["User_Image"]."\" height=\"180\" width=\"180\">";
+	 	$data=$data."<img src=\"/virtual-shelf/userpic/".$obj["User_Image"]."\" height=\"180\" width=\"180\">";
 	 } 
 
 //$books_name = $obj->book_name;
