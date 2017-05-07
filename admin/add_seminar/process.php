@@ -17,4 +17,7 @@
 	  else
 	   echo "regestration  Failed";
 	   echo $dat;
+	   header("Location: ../admin_home/index.php");
+        die();
+
 ?>

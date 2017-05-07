@@ -43,4 +43,7 @@ print "</pre>";
 		echo "New Book Aded\n";
 	  else
 	   echo "Failed";
+
+	header("Location: ../admin_home/index.php");
+        die();
 ?>
