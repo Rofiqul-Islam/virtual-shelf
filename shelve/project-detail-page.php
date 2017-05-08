@@ -33,7 +33,7 @@
 	function load(){
     book_id=<?php echo $_GET['data'];?>;
     console.log(book_id);
-	//propicload();
+	propicload();
 	//reviews();
     xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function(){
