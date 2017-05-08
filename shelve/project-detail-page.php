@@ -169,7 +169,7 @@
 			</ul>
 			
 			
-			<form id="form1">
+			<form>
 			<div class="form-group">
                 <div class="col-md-6 col-sm-6 col-xs-12">
                      <input type="text" id="review" placeholder="review" class="form-control col-md-7 col-xs-12">
@@ -193,7 +193,7 @@
 				}
 	
 		</style>
-			<button class="button "type="submit" form="form1" value="Submit" onclick=review()>Submit</button>
+			<button class="button "type="submit"  value="Submit" onclick="review()">Submit</button>
             <ul id="reviews">
 
             </ul>
