@@ -156,12 +156,7 @@
 				</div>
 				
 			</div>
-			
-                
-				
-				
-			
-            
+			            
             <ul id="links">
                 <li>
                     <a href="index.php" id="home">Home</a>
@@ -172,8 +167,10 @@
 
             </ul>
 			
-			
-			
+		</header>
+    </div>		
+	<div id="preamble2">
+	</div>
 			<form>
 			<div class="form-group">
                 <div class="col-md-6 col-sm-6 col-xs-12">
@@ -202,14 +199,9 @@
             <ul id="reviews">
 
             </ul>
-		</header>
-    </div>
+	
     
-    <div id="work-visuals">
-    	
-            
-        
-	</div>
+   
 </section>
 
 

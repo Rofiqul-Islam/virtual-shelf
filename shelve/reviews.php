@@ -7,7 +7,7 @@ $con = mysqli_connect('localhost', 'virtualshelf', 'helloworld', 'virtualshelf')
 	
 	$sql = "select Review, User_Name from review where book_id=".$book_id;
 	$result = mysqli_query($con, $sql);
-	$data="<br><h3><b>reviews</b><h2>";
+	$data="<h3><b>reviews</b><h2>";
 	//echo $result->num_rows;
 	while($obj=mysqli_fetch_object($result))
 	{
