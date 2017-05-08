@@ -21,7 +21,7 @@ $seminar_place=$obj->place;
 $seminar_date=$obj->date;
 $seminar_audience=$obj->listener;
 
-$data=$data."<li><a href=\"project-detail-page.php?data=".$seminar_id."\"><img src="."default.jpg"."><div class=\"overlay\"><summary><h2>".$seminar_name."</h2><h3>".$seminar_place."</h3><h3>".$seminar_date."</h3></summary><div class=\"loves\"><span>".$seminar_audience." going</span></div></div></a></li>";
+$data=$data."<li><a href=\"project-detail-page.php?data=".$seminar_id."\"><img src="."default.jpg"."><div class=\"overlay\"><summary><h2>".$seminar_name."</h2><h3>".$seminar_place."</h3><h3>".$seminar_date."</h3></summary><div class=\"loves\"><h3>".$seminar_audience." going</h3></div></div></a></li>";
 
 if($var==0)break;
 $var--;

@@ -116,7 +116,7 @@
                     <a href="index.php" id="home">Home</a>
                 </li>
                 <li>
-                    <a id="ilovethis" onclick= like() ><span id="num"></span></a>
+                    <a id="ilovethis" onclick= like() ><h3 id="num"></h3></a>
                 </li>
 
             </ul>
