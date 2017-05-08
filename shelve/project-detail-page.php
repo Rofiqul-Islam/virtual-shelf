@@ -94,6 +94,35 @@
         xhttp.open("GET","propic.php",true);
         xhttp.send();
  }
+ function reviews()
+ {
+	  var rev;
+	 rev=document.getElementById("review").value;
+     xhttp = new XMLHttpRequest();
+     xhttp.onreadystatechange = function(){
+        if(this.readyState == 4 && this.status == 200)
+            console.log(this.responseText);
+        
+            document.getElementById("reviews").innerHTML=this.responseText;
+            }
+        xhttp.open("GET","reviews.php?id="+book_id,true);
+        xhttp.send();
+	 
+	 
+ }
+  function review(){
+	 var rev;
+	 rev=document.getElementById("review").value;
+     xhttp = new XMLHttpRequest();
+     xhttp.onreadystatechange = function(){
+        if(this.readyState == 4 && this.status == 200)
+            console.log(this.responseText);
+        //if(!this.responseText.match(""))
+          //  document.getElementById("propic").innerHTML=this.responseText;
+            }
+        xhttp.open("GET","review.php?rev="+rev+"&id="+book_id,true);
+        xhttp.send();
+ }
  window.onload = load;
 </script>
 
@@ -127,6 +156,35 @@
                 </li>
 
             </ul>
+			<ul id=reviews>
+			</ul>
+			
+			
+			<form id="form1">
+			<div class="form-group">
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                     <input type="text" id="review" placeholder="Subject of the mail" class="form-control col-md-7 col-xs-12">
+					
+
+
+				</div>
+			</div>
+			</form>
+			<style>
+						.button {
+					background-color:black;
+					border: none;
+					color: white;
+					padding: 15px 32px;
+					text-align: center;
+					text-decoration: none;
+					font-size: 16px;
+					margin: 4px 2px;
+					cursor: pointer;
+				}
+	
+		</style>
+			<button class="button "type="submit" form="form1" value="Submit" onclick=review()>Submit</button>
             <ul id="reviews">
 
             </ul>
@@ -166,14 +224,15 @@
             <li>
                 <a href="index.php">All Books</a></li>
             <li>
-                <a href="../show_seminar/index.php"></a>Seminar</li>
+                <a href="../show_seminar/index.php">Seminar</a></li>
+			<li>
+                 <a href="logout.php">Logout</a></li>
 			<li>
 				<div id ="propic">
 					
 				</div>
 			</li>
-            <li>
-                 <a href="logout.php">Logout</a></li>
+            
         </ul>
 	</nav>
     

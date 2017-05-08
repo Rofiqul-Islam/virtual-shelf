@@ -160,7 +160,7 @@
     margin: 4px 2px;
     cursor: pointer;
 }
-	}
+	
 </style>
 <center>
 <button class="button" onclick="count_up()">
@@ -188,7 +188,20 @@
             </div><!-- wrapper -->
         </footer><!-- footer -->
     </div><!-- container -->
-    
+    <style>
+.caption2 { 
+	color: white; 
+   font: bold 15px Helvetica, Sans-Serif; 
+   position: absolute;
+	
+   bottom:35%; 
+   left: 0; 
+   width: 100% 
+   background: rgb(1, 1, 1); /* fallback color */
+   background: rgba(1, 1, 1, 0.7);
+   padding: 10px; 
+}
+</style>
     
     <nav id="toc">
         <ul>
@@ -198,15 +211,15 @@
                 <a href="javascript:popular()">Popular books</a></li>
             <li>
                 <a href="../show_seminar/index.php">Seminar</a></li>
-			
+			<li>
+                <a href="logout.php">Logout</a></li>
 			<li>
 				<div id ="propic">
                    <!-- <img src ="propic.jpg" height="180" width="180">-->
                    
                 </div>
 			</li>
-			<li>
-                <a href="logout.php">Logout</a></li><br><br><br>
+			
 			
         </ul>
 	</nav>
