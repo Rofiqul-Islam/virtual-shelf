@@ -33,7 +33,8 @@
 	function load(){
     book_id=<?php echo $_GET['data'];?>;
     console.log(book_id);
-	
+	//propicload();
+	//reviews();
     xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function(){
         if(this.readyState == 4 && this.status == 200)
@@ -50,7 +51,7 @@
     xhttp.open("GET","page.php?id="+book_id,true);
 	
     xhttp.send();
-	propicload();
+	
 	
 	}
 	function likec()
