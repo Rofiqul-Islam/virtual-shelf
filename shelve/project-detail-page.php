@@ -136,7 +136,8 @@
 </script>
 
 <body>
-    
+    <div id="container">
+        <section id="content">
             
 <div id="pfd-work">
 	<div id="work-bio">
@@ -155,7 +156,7 @@
 				<h1 id="book_name"></h1>
                 <h2 id="author_name"></h2>
                 <p id="edition"></p>
-				<p id="reviews"></p>
+				<p id="reviews">
 				
 			</div>
             
@@ -196,9 +197,7 @@
 	
 		</style>
 			<button class="button" value="Submit" onclick="review()">Submit</button>
-            <ul id="reviews">
-
-            </ul>
+          
 		</header>
     </div>
     
@@ -206,7 +205,8 @@
     	
             
         
-
+	</div>
+</section>
 
 
         <footer id="msf">
