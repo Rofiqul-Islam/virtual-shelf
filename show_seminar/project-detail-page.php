@@ -38,7 +38,7 @@
 		document.getElementById("subject").innerHTML=myObj['subject'];
 		document.getElementById("speaker").innerHTML=myObj['speaker'];
 		document.getElementById("work-visuals").innerHTML="</br></br></br></br></br><li data-visual=\"website-design-florentina-norfolk\"><img src=\"default.jpg\"></li>";
-		document.getElementById("num").innerHTML=myObj['listener'];
+		document.getElementById("num").innerHTML=myObj['listener']+" going";
 		document.getElementById("date").innerHTML=myObj['date'];
 		document.getElementById("place").innerHTML=myObj['place'];
     };
@@ -116,7 +116,7 @@
                     <a href="index.php" id="home">Home</a>
                 </li>
                 <li>
-                    <a id="ilovethis" onclick= like() ><h3 class="h3" id="num"></h3></a>
+                    <a id="ilovethis" onclick= like() ><span id="num"></span></a>
                 </li>
 
             </ul>
