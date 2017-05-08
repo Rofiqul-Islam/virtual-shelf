@@ -149,7 +149,30 @@
             		<img src="images/pyaari-logo.png" alt="Pyaari Website - For Website and Graphic Designers">
         		</a>
             </div>
-            
+				
+						<form>
+			
+                
+                     <input type="text" id="review" placeholder="review" style="heigth:50px;">
+							
+			</form>
+			<style>
+						.button {
+					background-color:black;
+					border: none;
+					color: white;
+					padding: 15px 32px;
+					text-align: center;
+					text-decoration: none;
+					font-size: 16px;
+					margin: 4px 2px;
+					cursor: pointer;
+				}
+	
+		</style>
+			<button class="button"  onclick="review()">Submit</button>
+          
+		</header>
 			
 			
 			
@@ -174,33 +197,7 @@
 			
 			
 			
-			<form>
-			
-                
-                     <input type="text" id="review" placeholder="review" style="heigth:50px;">
-					
-
-
-				
-			
-			</form>
-			<style>
-						.button {
-					background-color:black;
-					border: none;
-					color: white;
-					padding: 15px 32px;
-					text-align: center;
-					text-decoration: none;
-					font-size: 16px;
-					margin: 4px 2px;
-					cursor: pointer;
-				}
 	
-		</style>
-			<button class="button"  onclick="review()">Submit</button>
-          
-		</header>
     </div>
     
     <div id="work-visuals">
