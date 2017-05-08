@@ -110,7 +110,7 @@
         if(this.readyState == 4 && this.status == 200)
             console.log(this.responseText);
         
-            document.getElementById("preamble2").innerHTML=this.responseText;
+            document.getElementById("reviews").innerHTML=this.responseText;
             }
         xhttp.open("GET","reviews.php?id="+book_id,true);
         xhttp.send();
@@ -136,8 +136,7 @@
 </script>
 
 <body>
-    <div id="container">
-        <section id="content">
+    
             
 <div id="pfd-work">
 	<div id="work-bio">
@@ -148,14 +147,18 @@
         		</a>
             </div>
             
+			
+			
+			
 			<div id="preamble">
+                
 				<h1 id="book_name"></h1>
                 <h2 id="author_name"></h2>
-                <h2 id="edition"></h2>
-				
+                <p id="edition"></p>
+				<p id="reviews"></p>
 				
 			</div>
-			            
+            
             <ul id="links">
                 <li>
                     <a href="index.php" id="home">Home</a>
@@ -166,10 +169,8 @@
 
             </ul>
 			
-		</header>
-    </div>		
-	<div id="preamble2">
-	</div>
+			
+			
 			<form>
 			<div class="form-group">
                 <div class="col-md-6 col-sm-6 col-xs-12">
@@ -198,10 +199,14 @@
             <ul id="reviews">
 
             </ul>
-	
+		</header>
+    </div>
     
-   
-</section>
+    <div id="work-visuals">
+    	
+            
+        
+
 
 
         <footer id="msf">
