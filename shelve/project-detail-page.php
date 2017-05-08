@@ -152,8 +152,11 @@
 				<h1 id="book_name"></h1>
                 <h2 id="author_name"></h2>
                 <h2 id="edition"></h2>
+				<div id=preamble2>
+				</div>
+				
 			</div>
-			<div id="preamble2">
+			
                 
 				
 				
