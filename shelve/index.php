@@ -20,7 +20,7 @@
 	
 </head>
 <script type="text/javascript">
- load_num=50;
+ load_num=0;
  
  function load(){
     propicload();
