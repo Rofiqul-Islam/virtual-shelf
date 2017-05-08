@@ -34,7 +34,7 @@
     book_id=<?php echo $_GET['data'];?>;
     console.log(book_id);
 	propicload();
-	//reviews();
+	reviews();
     xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function(){
         if(this.readyState == 4 && this.status == 200)
@@ -158,7 +158,7 @@
 				<h1 id="book_name"></h1>
                 <h2 id="author_name"></h2>
                 <p id="edition"></p>
-				<p id="reviews">
+				<p id="reviews"></p>
 				
 			</div>
             
