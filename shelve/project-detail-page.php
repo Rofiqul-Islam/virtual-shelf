@@ -177,7 +177,7 @@
 			<form>
 			
                 
-                     <input type="text" id="review" placeholder="review">
+                     <input type="text" id="review" placeholder="review" style="heigth=24px;">
 					
 
 
@@ -198,7 +198,7 @@
 				}
 	
 		</style>
-			<button class="button" value="Submit" onclick="review()">Submit</button>
+			<button class="button"  onclick="review()">Submit</button>
           
 		</header>
     </div>
