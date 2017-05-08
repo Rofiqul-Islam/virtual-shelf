@@ -74,14 +74,7 @@
 		
 <p></p></div></div>
 		
-  <form class="searchForm" method="get" action="">              
-  <input class="searchTerm"  placeholder="Search…" autocomplete="off"/>
-  <input type="submit" class="searchBtn" value="GO"/>
-			  <ul class="suggestionBox" style="">
-				
-				 
-			  </ul>
-</form>
+ 
 
 
     
