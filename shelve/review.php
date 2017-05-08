@@ -12,7 +12,7 @@ if(isset($_GET['rev'])) {
 	$obj=mysqli_fetch_object($result);
 	$user_name=obj->User_Name;
 	
-    $sql ="INSERT INTO review(book_id, User_ID, Review,User_Name) VALUES ('".$book_id."','".$user_id."','".$rev."','".$user_name."')";
+    $sql ="INSERT INTO review(book_id, User_ID, Review,User_Name) VALUES (".$book_id.",".$user_id.",'".$rev."','".$user_name."')";
     $result = mysqli_query($con, $sql);
     
 
