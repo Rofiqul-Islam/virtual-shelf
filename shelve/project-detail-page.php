@@ -177,7 +177,7 @@
 			<form>
 			
                 
-                     <input type="text" id="review" placeholder="review" style="heigth=24px;">
+                     <input type="text" id="review" placeholder="review" style="heigth:50px;">
 					
 
 
