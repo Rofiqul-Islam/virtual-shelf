@@ -51,7 +51,7 @@
 	
     xhttp.send();
 	propicload();
-	reviews();
+	
 	}
 	function likec()
 	{
