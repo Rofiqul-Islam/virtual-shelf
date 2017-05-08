@@ -147,9 +147,7 @@
                         <a href="http://www.pinterest.com/198seven" rel="external" target="_blank" title="My Pinterest pins">Pinterest.</a>
                     </li>
                 </ul>
-                <div id="legal">
-                 <span>Handcrafted by<br>198seven &copy; 2014 PYAARI</span>
-                </div>
+               \
             </div>
         </footer>
     </div><!-- container -->
@@ -166,11 +164,7 @@
 	</nav>
     
     <div id="no-script">
-        <div>
-            <p>
-                The Pyaari website is fully responsive and requires Javascript.<br />
-                Please <a href="http://enable-javascript.com/">enable javascript</a> to use this site without issue.</p>
-        </div>
+      
     </div><!-- no-script -->
     
   <script src="ajax/jquery-1.11.0.min.js"></script>
