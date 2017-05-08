@@ -164,12 +164,10 @@
     <nav id="toc">
         <ul>
             <li>
-                <a class="active" href="index.html">Populer books</a></li>
+                <a href="../shelve/index.php">All books</a></li>
             <li>
-                <a href="about.html">SEMINAR</a></li>
-            <li>
-                <a href="what-we-do.html">What we do.</a></li>
-			<li>
+                <a href="index.php">SEMINAR</a></li>
+           <li>
                 <a href="logout.php">Logout</a></li>
 			<li>
 				<div id ="propic">
