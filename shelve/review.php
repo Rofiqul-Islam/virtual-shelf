@@ -7,7 +7,7 @@ if(isset($_GET['rev'])) {
     $rev= $_GET['rev'];
     $con = mysqli_connect('localhost', 'virtualshelf', 'helloworld', 'virtualshelf');
     if ($con->connect_errno > 0) echo "not connected";
-	$sql ="select User_Name from user where User_ID=".$user_id;
+	$sql ="select User_Name from user where User_ID=32";
 	$result = mysqli_query($con, $sql);
 	$obj=mysqli_fetch_object($result);
 	$user_name=obj->User_Name;
