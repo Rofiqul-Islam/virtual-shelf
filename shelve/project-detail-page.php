@@ -110,7 +110,7 @@
         if(this.readyState == 4 && this.status == 200)
             console.log(this.responseText);
         
-            document.getElementById("reviews").innerHTML=this.responseText;
+            document.getElementById("preamble").innerHTML=this.responseText;
             }
         xhttp.open("GET","reviews.php?id="+book_id,true);
         xhttp.send();
@@ -127,7 +127,7 @@
             console.log(this.responseText);
         //if(!this.responseText.match(""))
           //  document.getElementById("propic").innerHTML=this.responseText;
-            }
+	 }
         xhttp.open("GET","review.php?rev="+rev+"&id="+book_id,true);
         xhttp.send();
 		reviews();
@@ -152,7 +152,7 @@
                 <h1 id="book_name"></h1>
                 <h2 id="author_name"></h2>
                 <p id="edition"></p>
-                
+				
 				
 			</div>
             
@@ -165,8 +165,7 @@
                 </li>
 
             </ul>
-			<ul id=reviews>
-			</ul>
+			
 			
 			
 			<form>
