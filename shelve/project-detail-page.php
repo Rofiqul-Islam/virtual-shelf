@@ -110,7 +110,7 @@
         if(this.readyState == 4 && this.status == 200)
             console.log(this.responseText);
         
-            document.getElementById("preamble").innerHTML=this.responseText;
+            document.getElementById("preamble2").innerHTML=this.responseText;
             }
         xhttp.open("GET","reviews.php?id="+book_id,true);
         xhttp.send();
@@ -148,12 +148,12 @@
         		</a>
             </div>
             
-			<div>
+			<div id="preamble">
 				<h1 id="book_name"></h1>
                 <h2 id="author_name"></h2>
                 <h2 id="edition"></h2>
 			</div>
-			<div id="preamble">
+			<div id="preamble2">
                 
 				
 				
