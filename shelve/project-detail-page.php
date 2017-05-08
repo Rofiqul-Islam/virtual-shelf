@@ -175,14 +175,14 @@
 			
 			
 			<form>
-			<div class="form-group">
-                <div class="col-md-6 col-sm-6 col-xs-12">
-                     <input type="text" id="review" placeholder="review" class="form-control col-md-7 col-xs-12">
+			
+                
+                     <input type="text" id="review" placeholder="review">
 					
 
 
-				</div>
-			</div>
+				
+			
 			</form>
 			<style>
 						.button {
