@@ -148,10 +148,13 @@
         		</a>
             </div>
             
-			<div id="preamble">
-                <h1 id="book_name"></h1>
+			<div>
+				<h1 id="book_name"></h1>
                 <h2 id="author_name"></h2>
-                <p id="edition"></p>
+                <h2 id="edition"></h2>
+			</div>
+			<div id="preamble">
+                
 				
 				
 			</div>
