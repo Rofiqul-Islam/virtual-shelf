@@ -6,7 +6,7 @@ $books_name;
 $author_name;
 $var=$_GET['num'];
 $data="";
-$sql="select book_id, book_name, book_author, Image, book_like from book limit 51 OFFSET ".$var;
+$sql="select book_id, book_name, book_author, Image, book_like from book limit ".$var.",51";
 $ch_image;
 $like;
 $result = mysqli_query($con,$sql);
