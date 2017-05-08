@@ -2,10 +2,10 @@
 
 if(isset($_GET['id'])) {
 
-    $book_id = $_GET['id'];
+    $seminar_id = $_GET['id'];
     $con = mysqli_connect('localhost', 'virtualshelf', 'helloworld', 'virtualshelf');
     if ($con->connect_errno > 0) echo "not connected";
-    $sql = "select book_name, book_author, edition, Image, book_like from book where book_id=" . $book_id;
+    $sql = "select name, subject, speaker, place, date, listener from book where id=" .$seminar_id;
     $result = mysqli_query($con, $sql);
     $obj = mysqli_fetch_object($result);
     

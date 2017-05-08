@@ -24,7 +24,7 @@
 <script>
  var book_id;
 	function load(){
-    book_id=<?php echo $_GET['data'];?>;
+    seminar_id=<?php echo $_GET['data'];?>;
     console.log(book_id);
 
     xhttp = new XMLHttpRequest();
@@ -34,13 +34,15 @@
         //if(!this.responseText.match(""))
 			myObj = JSON.parse(xhttp.responseText);
 			console.log(myObj);
-        document.getElementById("book_name").innerHTML=myObj['book_name'];
-		document.getElementById("author_name").innerHTML=myObj['book_author'];
-		document.getElementById("edition").innerHTML=myObj['edition']+" edition";
-		document.getElementById("work-visuals").innerHTML="</br></br></br></br></br><li data-visual=\"website-design-florentina-norfolk\"><img src=\""+myObj['Image']+"\"></li>";
-		document.getElementById("num").innerHTML=myObj['book_like'];
+        document.getElementById("book_name").innerHTML=myObj['name'];
+		document.getElementById("author_name").innerHTML=myObj['subject'];
+		document.getElementById("edition").innerHTML=myObj['speaker'];
+		document.getElementById("work-visuals").innerHTML="</br></br></br></br></br><li data-visual=\"website-design-florentina-norfolk\"><img src=\"default.jpg\"></li>";
+		document.getElementById("num").innerHTML=myObj['listener'];
+		document.getElementById("num").innerHTML=myObj['date'];
+		document.getElementById("num").innerHTML=myObj['place'];
     };
-    xhttp.open("GET","page.php?id="+book_id,true);
+    xhttp.open("GET","page.php?id="+seminar_id,true);
 
     xhttp.send();
 	}
@@ -100,9 +102,11 @@
             </div>
             
 			<div id="preamble">
-                <h1 id="book_name"></h1>
-                <h2 id="author_name"></h2>
-                <p id="edition"></p>
+                <h1 id="name"></h1>
+                <h2 id="subject"></h2>
+                <p id="speaker"></p>
+				<p id="place"></p>
+				<p id="date"></p>
                 
 				
 			</div>
