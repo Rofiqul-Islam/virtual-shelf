@@ -16,9 +16,16 @@
 	<link href="index.html" rel="prev" />
     <meta name="author" content="" />
     <meta name="format-detection" content="" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
+<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- Styles -->
     <link href="styles/main.css" rel="stylesheet" media="screen, print" type="text/css" />
+	
     <script src="lib/modernizr-2.6.2.js"></script>
 </head>
 <script>
@@ -27,6 +34,7 @@
     book_id=<?php echo $_GET['data'];?>;
     console.log(book_id);
 	propicload();
+	reviews();
     xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function(){
         if(this.readyState == 4 && this.status == 200)
@@ -96,8 +104,7 @@
  }
  function reviews()
  {
-	  var rev;
-	 rev=document.getElementById("review").value;
+	  
      xhttp = new XMLHttpRequest();
      xhttp.onreadystatechange = function(){
         if(this.readyState == 4 && this.status == 200)
@@ -107,7 +114,7 @@
             }
         xhttp.open("GET","reviews.php?id="+book_id,true);
         xhttp.send();
-	 
+	
 	 
  }
   function review(){
@@ -122,6 +129,7 @@
             }
         xhttp.open("GET","review.php?rev="+rev+"&id="+book_id,true);
         xhttp.send();
+		reviews();
  }
  window.onload = load;
 </script>
@@ -163,7 +171,7 @@
 			<form id="form1">
 			<div class="form-group">
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                     <input type="text" id="review" placeholder="Subject of the mail" class="form-control col-md-7 col-xs-12">
+                     <input type="text" id="review" placeholder="review" class="form-control col-md-7 col-xs-12">
 					
 
 
