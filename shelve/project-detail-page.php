@@ -193,7 +193,7 @@
 				}
 	
 		</style>
-			<button class="button "type="submit"  value="Submit" onclick="review()">Submit</button>
+			<button class="button" value="Submit" onclick="review()">Submit</button>
             <ul id="reviews">
 
             </ul>
