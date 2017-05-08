@@ -48,8 +48,7 @@
 		document.getElementById("num").innerHTML=myObj['book_like'];
     };
     xhttp.open("GET","page.php?id="+book_id,true);
-	propicload();
-	reviews();
+	
     xhttp.send();
 	}
 	function likec()
