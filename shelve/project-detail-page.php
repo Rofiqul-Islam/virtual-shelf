@@ -50,6 +50,8 @@
     xhttp.open("GET","page.php?id="+book_id,true);
 	
     xhttp.send();
+	propicload();
+	reviews();
 	}
 	function likec()
 	{
