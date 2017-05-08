@@ -9,7 +9,7 @@ if(isset($_GET['rev'])) {
     if ($con->connect_errno > 0) echo "not connected";
 	$sql ="select User_Name from user where User_ID=".$user_id;
 	$result = mysqli_query($con, $sql);
-	$obj=mysqli_fetch_object($result)
+	$obj=mysqli_fetch_object($result);
 	$user_name=obj->User_Name;
 	
     $sql ="INSERT INTO review(book_id, User_ID, Review,User_Name) VALUES ('".$book_id."','".$user_id."','".$rev."','".$user_name."')";
